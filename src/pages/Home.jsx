@@ -1,3 +1,4 @@
+import Mainslider from "../components/mainslider";
 import ScrollComponent from "../components/ScrollComponent";
 
 const movies = [
@@ -74,6 +75,7 @@ const series = [
 function Home() {
   return (
     <div>
+      <Mainslider/>
       <ScrollComponent movies={movies} />
       <ScrollComponent movies={series} />
       <ScrollComponent movies={movies} />
