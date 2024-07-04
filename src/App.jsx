@@ -5,7 +5,7 @@ import Home from './pages/Home'
 
 function App() {
   return (
-    <div className="w-full h-fit min-h-screen bg-zinc-900 text-white">
+    <div className="w-full h-fit min-h-screen bg-black text-white">
       <header>
         <Heading />
       </header>

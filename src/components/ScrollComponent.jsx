@@ -1,4 +1,4 @@
-const ScrollComponent = ({ movies}) => {
+const ScrollComponent = ({ movies }) => {
     return (
       <div>
         <div>
@@ -8,12 +8,18 @@ const ScrollComponent = ({ movies}) => {
             style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
           >
             {movies.map((movie) => (
+              <div key={movie} className=" flex flex-col p-2 rounded-xl">
+                
               <img
                 key={movie.src}
                 src={movie.src}
                 alt={movie.alt}
-                className="w-[35vw] max-w-[150px] rounded-xl shadow-md object-cover"
+                className="w-[30vw] h-full max-w-[150px] rounded-xl shadow-md object-cover"
               />
+              <div>
+                <h1 className="text-xs ">Hellow Word</h1>  
+              </div>
+              </div>
             ))}
           </div>
         </div>
