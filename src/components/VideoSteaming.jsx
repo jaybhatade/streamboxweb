@@ -1,5 +1,5 @@
 
-const AttackOnTitanPlayer = () => {
+const VideoPlayer = () => {
   
 
   return (
@@ -22,4 +22,4 @@ const AttackOnTitanPlayer = () => {
   );
 };
 
-export default AttackOnTitanPlayer;
+export default VideoPlayer;
