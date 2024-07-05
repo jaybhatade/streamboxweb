@@ -9,6 +9,12 @@ const movies = [
     cateagory: "Movie"
   },
   {
+    src: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+    alt: "imagebanner",
+    title: "Your Name",
+    cateagory: "Movie"
+  },
+  {
     src: "https://static.aniwavetv.to/i/2018/04/15858a826de711967c8e5a01ad246f64.jpg",
     alt: "imagebanner",
     title: "Garden of Words"
@@ -29,6 +35,24 @@ const movies = [
     src: "https://static.aniwavetv.to/i/1/11/f8afece6eff312ce165e22779b894708.jpg",
     alt: "imagebanner",
     title: "Movies 2024",
+    cateagory: "Movie"
+  },
+  {
+    src: "https://static.aniwavetv.to/i/0/01/016aafbf1f73381e0f91ee3f45b267d1.jpg",
+    alt: "imagebanner",
+    title: "Movies 2024",
+    cateagory: "Movie"
+  },
+  {
+    src: "https://static.aniwavetv.to/i/2018/04/7a3dd597641c97e907433acf5f9c3eb5.jpg",
+    alt: "imagebanner",
+    title: "Naruto",
+    cateagory: "Movie"
+  },
+  {
+    src: "https://static.aniwavetv.to/i/2018/04/7ed25f35038e8c1e3fb0133b262b063f.jpg",
+    alt: "imagebanner",
+    title: "Nruto Movie",
     cateagory: "Movie"
   },
   {
@@ -75,7 +99,7 @@ const series = [
 function Home() {
   return (
     <div>
-      <Mainslider/>
+      <Mainslider />
       <ScrollComponent movies={movies} />
       <ScrollComponent movies={series} />
       <ScrollComponent movies={movies} />
