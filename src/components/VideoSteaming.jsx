@@ -1,4 +1,3 @@
-import ReactPlayer from 'react-player';
 
 const AttackOnTitanPlayer = () => {
   
