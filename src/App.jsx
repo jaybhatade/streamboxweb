@@ -1,6 +1,7 @@
 import './App.css';
 import Navigation from './components/bottomNavigation';
 import Heading from './components/Header';
+import VideoStreaming from './components/VideoSteaming';
 import Home from './pages/Home'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Heading />
       </header>
       
+      <VideoStreaming/>
       
       <Home/>
 
