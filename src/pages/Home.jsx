@@ -101,7 +101,7 @@ function Home() {
   return (
     <div>
 
-      <VideoPlayer/>
+      
 
       <Mainslider />
       <ScrollComponent movies={movies} />

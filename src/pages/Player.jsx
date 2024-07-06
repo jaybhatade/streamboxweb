@@ -6,11 +6,11 @@ import VideoPlayer from "../components/VideoSteaming"
 function Player() {
   return (
     <div>
-    <Heading/>
 
-    <VideoPlayer/>
 
-    <Navigation/>
+      <VideoPlayer />
+
+
     </div>
   )
 }
