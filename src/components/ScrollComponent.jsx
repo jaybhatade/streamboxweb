@@ -8,7 +8,7 @@ const ScrollComponent = ({ movies }) => {
           style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
         >
           {movies.map((movie) => (
-            <div key={movie} className=" flex flex-col p-2 rounded-xl max-w-[170px]">
+            <div key={movie} className=" flex flex-col p-2 rounded-xl max-w-[170px] hover:scale-110 transition-all">
 
               <img
                 key={movie.src}
