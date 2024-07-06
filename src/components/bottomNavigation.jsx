@@ -14,10 +14,10 @@ function Navigation() {
                         <img src="/images/moviesicon.png" className="w-6" />
                         <h3 className="text-xs">Movies</h3>
                     </Link>
-                    <a href="#" className="flex flex-col gap-1 item items-center justify-between hover:text-red-700">
+                    <Link to="/premium" href="#" className="flex flex-col gap-1 item items-center justify-between hover:text-red-700">
                         <img src="/images/premiumicon.png" className="w-6" />
                         <h3 className="text-xs">Premium</h3>
-                    </a>
+                    </Link>
                     <a href="#" className="flex flex-col gap-1 items-center justify-between hover:text-red-700">
                         <img src="/images/profileicon.png" className="w-6" />
                         <h3 className="text-xs">Profile</h3>
