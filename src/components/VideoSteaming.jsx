@@ -30,7 +30,9 @@ const PlayerPage = () => {
   return (
     <div className="p-4">
       <Link to="/" className="text-red-600 hover:underline mb-4 inline-block">&larr; Back to Movies</Link>
+      <div className="w-full h-fit">
       <MoviePlayer movie={movie} />
+      </div>
     </div>
   );
 };

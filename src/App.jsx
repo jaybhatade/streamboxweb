@@ -4,8 +4,8 @@ import Loader from './components/Loader';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Navigation from './components/bottomNavigation';
 import Home from './pages/Home';
-import Player from './pages/Player';
 import Premium from './pages/Premium';
+import PlayerPage from './components/VideoSteaming';
 
 // Layout component that includes the header and navigation
 const Layout = () => {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "/player/:id", element: <Player /> },
+      { path: "/player/:id", element: <PlayerPage /> },
       { path: "premium", element: <Premium /> },
     ],
   },

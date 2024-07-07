@@ -5,13 +5,15 @@ export const movieList = [
         posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
         title: "Weathering With You",
         discription: "Anime Movie",
-        vidUrl: "https://vidsrc.xyz/embed/movie/tt9426210"
+        
       },
       {
+        id:"tt5311514",
         posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
         alt: "imagebanner",
         title: "Your Name",
-        cateagory: "Movie"
+        discription: "Anime Movie",
+        
       },
       {
         posterURL: "https://static.aniwavetv.to/i/2018/04/15858a826de711967c8e5a01ad246f64.jpg",
@@ -95,3 +97,18 @@ export const series = [
       },
     ];
     
+
+  export const banners = [
+    {
+      id:"tt10872600",
+      vidUrl:"https://vidsrc.xyz/embed/movie/tt10872600",
+      posterURL: "https://images7.alphacoders.com/132/1322340.jpg",
+      title: "Spider-Man: No Way Home",
+      duration: "148 min",
+      studio: "Marvel & Sony",
+      director: "Jon Watts",
+      discreption: "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+    }
+
+
+  ];
