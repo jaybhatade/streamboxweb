@@ -112,3 +112,165 @@ export const series = [
 
 
   ];
+
+
+  export const movies = [
+    {
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },{
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        discription: "Anime Movie",
+        
+      },
+      {
+        id:"tt5311514",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+        alt: "imagebanner",
+        title: "Your Name",
+        discription: "Anime Movie",
+        
+      },
+    ]

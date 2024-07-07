@@ -15,7 +15,7 @@ function Navigation() {
                         <AiFillHome size={25}/>
                         <h3 className=" text-xs ">Home</h3>
                     </Link>
-                    <Link to="/player" className="flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out">
+                    <Link to="/movies" className="flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out">
                         <MdLocalMovies size={25}/>
                         <h3 className="text-xs">Movies</h3>
                     </Link>
@@ -27,7 +27,7 @@ function Navigation() {
                     <FaUser size={25}/>
                         <h3 className="text-xs">Profile</h3>
                     </Link>
-                    <Link to="/setting" className="flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out">
+                    <Link to="/search" className="flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out">
                     <FaSearch size={25}/>
                         <h3 className="text-xs">Search</h3>
                     </Link>

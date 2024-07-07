@@ -6,6 +6,9 @@ import Navigation from './components/bottomNavigation';
 import Home from './pages/Home';
 import Premium from './pages/Premium';
 import PlayerPage from './components/VideoSteaming';
+import MoviePage from './pages/MoviePage';
+import ProfilePage from './pages/ProfilePage';
+import SearchPage from './pages/SearchPage';
 
 // Layout component that includes the header and navigation
 const Layout = () => {
@@ -28,7 +31,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/player/:id", element: <PlayerPage /> },
-      { path: "premium", element: <Premium /> },
+      { path: "/premium", element: <Premium /> },
+      { path: "/movies", element: <MoviePage /> },
+      { path: "/profile", element: <ProfilePage/> },
+      { path: "/search", element: <SearchPage/> },
     ],
   },
 ]);
