@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ScrollComponent = ({ movies }) => {
   return (
     <div>
@@ -8,18 +10,20 @@ const ScrollComponent = ({ movies }) => {
           style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
         >
           {movies.map((movie) => (
-            <div key={movie} className=" flex flex-col p-2 rounded-xl max-w-[170px] hover:scale-110 transition-all">
+            <Link 
+              key={movie.id}
+              to={`/player/${movie.id}`}
+              className=" flex flex-col p-2 rounded-xl max-w-[170px] hover:scale-110 transition-all">
 
               <img
-                key={movie.src}
-                src={movie.src}
-                alt={movie.alt}
+                src={movie.posterURL}
+                alt={movie.title}
                 className="w-[30vw] h-full max-w-[150px] rounded-xl shadow-md object-cover"
               />
               <div>
                 <h1 className="text-sm text-[#cfcfcf] pt-1 max-h-[20px] overflow-hidden">{movie.title}..</h1>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

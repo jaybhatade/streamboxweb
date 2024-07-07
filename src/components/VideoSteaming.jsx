@@ -1,26 +1,38 @@
+import { useParams, Link } from 'react-router-dom';
+import MoviePlayer from './MoviePlayer';
+import { movieList } from '../MovieData';
 
-const VideoPlayer = () => {
+const PlayerPage = () => {
+  const { id } = useParams();
+  
+  console.log('URL ID:', id);
+  console.log('Movie List:', movieList);
 
+  const movie = movieList.find(movie => movie.id === id);
+
+  console.log('Found Movie:', movie);
+
+  if (!movie) {
+    return (
+      <div className="p-4">
+        <Link to="/" className="text-red-600 hover:underline mb-4 inline-block">&larr; Back to Movies</Link>
+        <h2 className="text-xl font-bold mb-4">Movie not found</h2>
+        <p>Debug Information:</p>
+        <ul className="list-disc pl-5">
+          <li>URL ID: {id}</li>
+          <li>Number of movies in list: {movieList.length}</li>
+          <li>Movie IDs in list: {movieList.map(m => m.id).join(', ')}</li>
+        </ul>
+      </div>
+    );
+  }
 
   return (
-    <div className="flex flex-col items-center md: md:justify-start min-h-screen  bg-black">
-      <h1 className="text-xl font-bold mb-2 text-white">Spider-Man: No Way Home</h1>
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
-        <iframe
-          src='https://vidsrc.xyz/embed/movie/tt10872600'
-          height="200px"
-          width="100%"
-          allowFullScreen
-
-
-        ></iframe>
-
-      </div>
-      <p className="mt-4 text-sm text-white">
-        Note: This is for educational purposes only. Please support the official release.
-      </p>
+    <div className="p-4">
+      <Link to="/" className="text-red-600 hover:underline mb-4 inline-block">&larr; Back to Movies</Link>
+      <MoviePlayer movie={movie} />
     </div>
   );
 };
 
-export default VideoPlayer;
+export default PlayerPage;
