@@ -26,14 +26,7 @@ export const movieList = [
         title: "Demon Slayer: Sibling's Bond",
         cateagory: "Movie"
       },
-      {
-        id: "tt10872600",
-        posterURL: "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
-        alt: "imagebanner",
-        title: "Spider-Man: No Way Home",
-        cateagory: "Movie"
-      },
-
+      
       {
         id:"tt9426210",
         posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
@@ -70,6 +63,41 @@ export const movieList = [
         title: "Movies 2024",
         cateagory: "Movie"
       },
+      {
+        id: "tt10872600",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
+        alt: "imagebanner",
+        title: "Spider-Man: No Way Home",
+        cateagory: "Movie"
+      },
+      {
+        id: "tt9419884 ",
+        posterURL: " https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_SX300.jpg " ,
+        title: " Doctor Strange in the Multiverse of Madness ",
+        lang: " English "
+},
+
+{
+        id: "tt9362722 ",
+        posterURL: " https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg " ,
+        title: " Spider-Man: Across the Spider-Verse ",
+        lang: " English "
+},
+
+{
+        id: "tt4633694 ",
+        posterURL: " https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg " ,
+        title: " Spider-Man: Into the Spider-Verse ",
+        lang: " English "
+},
+
+{
+        id: "tt10954600 ",
+        posterURL: " https://m.media-amazon.com/images/M/MV5BODZhNzlmOGItMWUyYS00Y2Q5LWFlNzMtM2I2NDFkM2ZkYmE1XkEyXkFqcGdeQXVyMTU5OTA4NTIz._V1_SX300.jpg " ,
+        title: " Ant-Man and the Wasp: Quantumania ",
+        lang: " English "
+},
+
     ];
     
 export const series = [
