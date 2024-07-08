@@ -10,15 +10,9 @@ function MoviePage() {
             Trending Anime Movies
           </div>
           <div
-<<<<<<< HEAD
             className="flex w-full h-fit px-2 flex-wrap justify-items-stretch"
             >
             {animeMovies.map((movie) => (
-=======
-            className="flex w-full h-fit px-2 flex-wrap"
-          >
-            {movies.map((movie) => (
->>>>>>> 3f94d44119f3f28f749fa5b474dc6efe9d0fa3a3
               <Link
                 key={movie.id}
                 to={`/player/${movie.id}`}
