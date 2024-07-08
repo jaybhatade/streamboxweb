@@ -27,10 +27,18 @@ export const movieList = [
         cateagory: "Movie"
       },
       {
-        posterURL: "https://static.aniwavetv.to/i/5/56/5680065f3e0d43e7dfde62fcb0dd1eef.jpg",
+        id: "tt10872600",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
         alt: "imagebanner",
-        title: "Movies 2024",
+        title: "Spider-Man: No Way Home",
         cateagory: "Movie"
+      },
+
+      {
+        id:"tt9426210",
+        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
+        title: "Weathering With You",
+        discription: "Anime Movie",
       },
       {
         posterURL: "https://static.aniwavetv.to/i/1/11/f8afece6eff312ce165e22779b894708.jpg",

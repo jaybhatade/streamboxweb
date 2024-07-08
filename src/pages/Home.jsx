@@ -14,9 +14,9 @@ function Home() {
       
 
       <Mainslider />
-      <ScrollComponent movies={movieList} />
-      <ScrollComponent movies={series} />
-      <ScrollComponent movies={movieList} />
+      <ScrollComponent movies={movieList} headingTitle={"Trending Anime Movies"}/>
+      <ScrollComponent movies={series} headingTitle={"Trending Anime Movies"}/>
+      <ScrollComponent movies={movieList} startIndex={3} endIndex={6} headingTitle={"Latest Anime Movie"} />
       {/* <div className="w-full bg-red-300 h-[10vh] mt-8 flex justify-center items-center ">
         @StreamBox by Jay Bhatade
       </div> */}
