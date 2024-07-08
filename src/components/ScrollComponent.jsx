@@ -16,15 +16,15 @@ const ScrollComponent = ({ movies, startIndex = 0, endIndex, headingTitle }) => 
             <Link 
               key={movie.id}
               to={`/player/${movie.id}`}
-              className="flex flex-col p-2 rounded-xl max-w-[170px] hover:scale-110 transition-all">
+              className="flex flex-col p-2 max-w-[150px] hover:scale-110 transition-all">
 
               <img
                 src={movie.posterURL}
                 alt={movie.title}
-                className="w-[30vw] h-full max-w-[150px] rounded-xl shadow-md object-cover"
+                className="w-[30vw] md:w-[150px] h-full md:h-[200px]  rounded-lg shadow-md object-cover"
               />
               <div>
-                <h1 className="text-sm text-[#cfcfcf] pt-1 max-h-[20px] overflow-hidden">{movie.title}..</h1>
+                <h1 className="text-xs text-[#cfcfcf] pt-1 max-h-[40px] overflow-hidden">{movie.title}</h1>
               </div>
             </Link>
           ))}
