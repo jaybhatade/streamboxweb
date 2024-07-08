@@ -11,7 +11,7 @@ function MoviePage() {
           </div>
           <div
             className="flex w-full h-fit px-2 flex-wrap"
-            >
+          >
             {movies.map((movie) => (
               <Link
                 key={movie.id}
@@ -21,12 +21,12 @@ function MoviePage() {
                 <img
                   src={movie.posterURL}
                   alt={movie.title}
-                  className="w-[30vw] h-full md:w-[150px] md:h-[200px] rounded-xl shadow-md object-cover"
+                  className="w-[30vw] h-full md:w-[150px] md:h-[220px] rounded-xl shadow-md object-cover"
                 />
                 <div>
-                  <h1 className="text-sm text-[#cfcfcf] pt-1 max-h-[40px] overflow-hidden">
+                  {/* <h1 className="text-sm text-[#cfcfcf] pt-1 max-h-[40px] overflow-hidden">
                     {movie.title}..
-                  </h1>
+                  </h1> */}
                 </div>
               </Link>
             ))}
