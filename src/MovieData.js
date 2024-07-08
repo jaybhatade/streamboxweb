@@ -114,11 +114,11 @@ export const series = [
   ];
 
 
-  export const movies = [
+  export const animeMovies = [
     {
         id:"tt9426210",
         posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
-        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        title: "Weathering With You",
         discription: "Anime Movie",
         
       },
@@ -131,9 +131,9 @@ export const series = [
         
       },
       {
-        id:"tt9426210",
-        posterURL: "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
-        title: "Weathering With You djalksjkladlk ajflkajflkaf lahdlalh lkadkljakj",
+        id:"tt11032374",
+        posterURL: "https://m.media-amazon.com/images/M/MV5BODI2NjdlYWItMTE1ZC00YzI2LTlhZGQtNzE3NzA4MWM0ODYzXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_SX300.jpg",
+        title: "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
         discription: "Anime Movie",
         
       },
