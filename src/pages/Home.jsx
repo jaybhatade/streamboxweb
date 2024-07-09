@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Heading from '../components/Header'
 import Mainslider from "../components/mainslider";
 import ScrollComponent from "../components/ScrollComponent";
@@ -6,6 +7,9 @@ import { movieList, series} from '../MovieData';
 
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
   return (
     <div>
       <header>

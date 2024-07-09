@@ -5,30 +5,28 @@ const ScrollComponent = ({ movies, startIndex = 0, endIndex, headingTitle }) => 
   const slicedMovies = movies.slice(startIndex, endIndex || movies.length);
 
   return (
-    <div>
-      <div>
-        <div className="text-2xl text-white pt-4 pb-1 px-4">{headingTitle}</div>
-        <div
-          className="flex h-fit overflow-y-auto px-2 md:flex-wrap"
-          style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
-        >
-          {slicedMovies.map((movie) => (
-            <Link 
-              key={movie.id}
-              to={`/player/${movie.id}`}
-              className="flex flex-col p-2 max-w-[150px] hover:scale-110 transition-all">
-
-              <img
-                src={movie.posterURL}
-                alt={movie.title}
-                className="w-[30vw] md:w-[150px] h-full md:h-[200px]  rounded-lg shadow-md object-cover"
-              />
-              <div>
-                <h1 className="text-xs text-[#cfcfcf] pt-1 max-h-[40px] overflow-hidden">{movie.title}</h1>
-              </div>
-            </Link>
-          ))}
-        </div>
+    <div className="py-4">
+      <div className="text-2xl text-white pb-2 pl-2">{headingTitle}</div>
+      <div
+        className="flex overflow-x-auto overflow-y-hidden scrollbar-hide "
+        style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
+      >
+        {slicedMovies.map((movie) => (
+          <Link
+            key={movie.id}
+            to={`/player/${movie.id}`}
+            className="flex-shrink-0 p-2 max-w-[130px] sm:max-w-[150px] hover:scale-110 transition-all"
+          >
+            <img
+              src={movie.posterURL}
+              alt={movie.title}
+              className="w-full h-auto rounded-lg shadow-md object-cover"
+            />
+            <div className="pt-1">
+              <h1 className="text-xs text-[#cfcfcf] max-h-[30px] md:max-h-[40px] overflow-hidden">{movie.title}</h1>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
