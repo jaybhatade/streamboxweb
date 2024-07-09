@@ -1,16 +1,19 @@
 import { useParams, Link } from 'react-router-dom';
 import MoviePlayer from './MoviePlayer';
 import { movieList } from '../MovieData';
+import HeaderTwo from '../components/HeaderTwo'
 
 const PlayerPage = () => {
   const { id } = useParams();
-  
+
   console.log('URL ID:', id);
   console.log('Movie List:', movieList);
 
   const movie = movieList.find(movie => movie.id === id);
 
   console.log('Found Movie:', movie);
+
+  // Remove before production
 
   if (!movie) {
     return (
@@ -26,12 +29,12 @@ const PlayerPage = () => {
       </div>
     );
   }
-
+  // TIll 
   return (
-    <div className="p-4">
-      <Link to="/" className="text-red-600 hover:underline mb-4 inline-block">&larr; Back to Movies</Link>
-      <div className="w-full h-fit">
-      <MoviePlayer movie={movie} />
+    <div className="">
+      <HeaderTwo title={"Movie Player"}/>
+      <div className="w-full h-fit pt-20 p-4">
+        <MoviePlayer movie={movie} />
       </div>
     </div>
   );
