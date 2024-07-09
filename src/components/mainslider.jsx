@@ -9,7 +9,7 @@ const Mainslider = () => {
 
       {banners.map((banner) => (
         <div key={banner.src} className="w-full justify-between flex flex-col p-4 md:p-8 md:flex-row-reverse rounded-lg">
-          <img src={banner.posterURL} alt={banner.title} className=" w-full object-cover  md:w-[55%] md:ml-4 rounded-xl" />
+          <img src={banner.poster} alt={banner.title} className=" w-full object-cover  md:w-[55%] md:ml-4 rounded-xl" />
           <div className="text-left flex items-center justify-between md:flex-col  md:items-start mt-4">
             <div className="w-[60%] md:w-full h-fit">
               <h1 className=" md:w-full text-lg md:text-2xl lg:text-4xl">{banner.title}</h1>
