@@ -54,12 +54,12 @@ const MovieSearch = () => {
             key={movie.id}
             className="block"
           >
-            <div className=" rounded-lg shadow-md overflow-hidden h-full">
+            <div className=" rounded-lg shadow-md overflow-hidden h-full hover:scale-105 duration-300 ease-in-out transition-all ">
               <div className="p-2">
                 <img
                   src={movie.poster}
                   alt={movie.title}
-                  className="w-full h-56 md:h-40 lg:h-56 object-cover rounded-lg mb-2"
+                  className="w-full h-56 md:h-40 lg:h-56 object-cover rounded-lg mb-2 "
                 />
                 <p className="text-sm text-center  line-clamp-2">{movie.title}</p>
               </div>
