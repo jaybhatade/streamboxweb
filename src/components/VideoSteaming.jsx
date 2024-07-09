@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import MoviePlayer from './MoviePlayer';
+import ScrollComponent from '../components/ScrollComponent';
 import { movieList } from '../MovieData';
 import HeaderTwo from '../components/HeaderTwo'
 
@@ -33,8 +34,10 @@ const PlayerPage = () => {
   return (
     <div className="">
       <HeaderTwo title={"Movie Player"}/>
-      <div className="w-full h-fit pt-20 p-4">
+      <div className="w-full h-fit pt-20 ">
         <MoviePlayer movie={movie} />
+
+       
       </div>
     </div>
   );
