@@ -4,7 +4,6 @@ const MoviePlayer = ({ movie }) => {
   return (
     <div className="bg-black  rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-2 text-white">{movie.title}</h2>
-      <p className="mb-4 text-White">{movie.description}</p>
       <div className="w-full h-[400px] max-w-3xl mx-auto">
         <iframe
           src={`https://vidsrc.xyz/embed/movie/${movie.id}`}
