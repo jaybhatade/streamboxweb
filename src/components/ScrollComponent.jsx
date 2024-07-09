@@ -6,16 +6,16 @@ const ScrollComponent = ({ movies, startIndex = 0, endIndex, headingTitle }) => 
 
   return (
     <div className="py-4">
-      <div className="text-2xl text-white pb-2 pl-2">{headingTitle}</div>
+      <div className="text-2xl text-white  pl-2">{headingTitle}</div>
       <div
-        className="flex overflow-x-auto overflow-y-hidden scrollbar-hide "
+        className="flex overflow-x-auto overflow-y-hidden scrollbar-hide py-2"
         style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
       >
         {slicedMovies.map((movie) => (
           <Link
             key={movie.id}
             to={`/player/${movie.id}`}
-            className="flex-shrink-0 p-2 max-w-[130px] sm:max-w-[150px] hover:scale-110 transition-all"
+            className="flex-shrink-0 p-2 max-w-[130px] sm:max-w-[150px] hover:scale-110 transition-all ease-in-out duration-300"
           >
             <img
               src={movie.posterURL}

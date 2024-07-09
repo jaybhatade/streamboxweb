@@ -1,7 +1,8 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import React,{ useState, useEffect } from 'react';
+import LoadingBar from 'react-top-loading-bar'
 import Loader from './components/Loader';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet, useLocation } from 'react-router-dom';
 import Navigation from './components/bottomNavigation';
 import Home from './pages/Home';
 import Premium from './pages/Premium';
@@ -12,10 +13,23 @@ import SearchPage from './pages/SearchPage';
 
 // Layout component that includes the header and navigation
 const Layout = () => {
+  const [progress, setProgress] = useState(0)
+  const location = useLocation()
+
+  React.useEffect(() => {
+    setProgress(100)
+  }, [location])
+
+
   console.log('Rendering Layout');
   return (
     <div className="w-full h-fit min-h-screen bg-black text-white">
       <main className="pb-16">
+      <LoadingBar
+        color='#B91C1C'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
         <Outlet />
       </main>
       <Navigation />
