@@ -6,7 +6,7 @@ export const movieList = [
     title: "Weathering with You",
     released: "17 Jan 2020",
     plot: "Set during a period of exceptionally rainy weather, high-school boy Hodaka Morishima runs away from his troubled rural home to Tokyo and befriends an orphan girl who can manipulate the weather.",
-    languageuage: "Japanese",
+    language: "Japanese",
   },
   {
     id: "tt5311514",
@@ -172,7 +172,11 @@ export const movieList = [
   {
     poster:
       "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+<<<<<<< HEAD
     plot: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
+=======
+    plot: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one.",
+>>>>>>> a023e867f98c3c6167532e5895554d4879d132ce
     id: "tt1375666",
     title: "Inception",
     genre: "Action, Adventure, Sci-Fi",
@@ -213,6 +217,32 @@ export const movieList = [
     language: "English",
     runtime: "130 min",
   },
+<<<<<<< HEAD
+=======
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMWU4ZjNlNTQtOGE2MS00NDI0LWFlYjMtMmY3ZWVkMjJkNGRmXkEyXkFqcGdeQXVyNjE1OTQ0NjA@._V1_SX300.jpg", plot: "The film chronicles India's covert military operation against suspected militants in Pakistan-occupied Kashmir. It follows the events leading up to and during the surgical strike, showcasing the Indian army's special forces as they carry out a secret mission to avenge the killing of their fellow soldiers at their base by a terrorist group.", id: "tt8291224", title: "Uri: The Surgical Strike", genre: "Action, Drama, History", released: "11 Jan 2019", language: "English", runtime: "138 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BNzlkNzVjMDMtOTdhZC00MGE1LTkxODctMzFmMjkwZmMxZjFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg", plot: "LAPD officer Brian O'Connor goes undercover in the street racing world to investigate a series of truck hijackings. He befriends Dominic Toretto, a suspect, and falls for his sister Mia. As Brian becomes enamored with the racing lifestyle, he must choose between his duty and his newfound family.", id: "tt0232500", title: "The Fast and the Furious", genre: "Action, Crime, Thriller", released: "22 Jun 2001", language: "English", runtime: "106 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMzExYjcyYWMtY2JkOC00NDUwLTg2OTgtMDI3MGY2OWQzMDE2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg", plot: "Ex-cop Brian O'Conner teams up with his friend Roman Pearce and customs agent Monica Fuentes to bring down Miami drug lord Carter Verone. They go undercover as street racers, using their driving skills to infiltrate Verone's organization and gather evidence to take him down.", id: "tt0322259", title: "2 Fast 2 Furious", genre: "Action, Crime, Thriller", released: "06 Jun 2003", language: "English", runtime: "107 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_SX300.jpg", plot: "Sean Boswell, an American teen, moves to Tokyo to avoid jail time for illegal street racing. There, he discovers the underground world of drift racing. As he learns the new technique and makes friends, he becomes entangled in the dangerous local racing scene and must prove himself to survive.", id: "tt0463985", title: "The Fast and the Furious: Tokyo Drift", genre: "Action, Crime, Thriller", released: "16 Jun 2006", language: "English", runtime: "104 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BYjQ1ZTMxNzgtZDcxOC00NWY5LTk3ZjAtYzRhMDhlNDZlOWEzXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg", plot: "Dom Toretto and Brian O'Connor reunite to confront a shared enemy. They assemble a team for high-stakes heists across Los Angeles and Mexico. As they push the limits of what's possible behind the wheel, they must learn to trust each other again to outmaneuver their foe and seek revenge.", id: "tt1013752", title: "Fast & Furious", genre: "Action, Crime, Thriller", released: "03 Apr 2009", language: "English", runtime: "107 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMTUxNTk5MTE0OF5BMl5BanBnXkFtZTcwMjA2NzY3NA@@._V1_SX300.jpg", plot: "Dom, Brian, and their crew are cornered in Rio. They plan one last heist to gain freedom, targeting a corrupt businessman. Federal agent Luke Hobbs pursues them, but as the lines blur between good and bad, he must rely on instincts to corner his prey before someone else does.", id: "tt1596343", title: "Fast Five", genre: "Action, Crime, Thriller", released: "29 Apr 2011", language: "English", runtime: "130 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg", plot: "Hobbs recruits Dom and his team to take down an organization of mercenary drivers in London. The twist: Dom's presumed-dead lover Letty is working with the enemy. In exchange for their help, the team is offered full pardons to return home and reunite with their families.", id: "tt1905041", title: "Fast & Furious 6", genre: "Action, Crime, Thriller", released: "24 May 2013", language: "English", runtime: "130 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMTQxOTA2NDUzOV5BMl5BanBnXkFtZTgwNzY2MTMxMzE@._V1_SX300.jpg", plot: "The crew faces Deckard Shaw, out for revenge for his brother. They must also recover a terrorism program called 'God's Eye' while caught between a terrorist and the U.S. government. Torretto reunites his team to stop Shaw and secure the dangerous program.", id: "tt2820852", title: "Furious 7", genre: "Action, Crime, Thriller", released: "03 Apr 2015", language: "English", runtime: "137 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_SX300.jpg", plot: "A mysterious woman seduces Dom back into crime, betraying those closest to him. The crew faces trials across the globe, from Cuba to New York to the Arctic, to stop an anarchist and bring home the man who made them a family.", id: "tt4630562", title: "The Fate of the Furious", genre: "Action, Crime, Thriller", released: "14 Apr 2017", language: "English", runtime: "136 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SX300.jpg", plot: "Dom and the crew must take on an international terrorist who turns out to be Dom and Mia's estranged brother.", id: "tt5433138", title: "F9: The Fast Saga", genre: "Action, Crime, Thriller", released: "25 Jun 2021", language: "English", runtime: "143 min" },
+
+  { poster: "https://m.media-amazon.com/images/M/MV5BNzZmOTU1ZTEtYzVhNi00NzQxLWI5ZjAtNWNhNjEwY2E3YmZjXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg", plot: "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.", id: "tt5433140", title: "Fast X", genre: "Action, Adventure, Crime", released: "19 May 2023", language: "English", runtime: "141 min" },
+
+>>>>>>> a023e867f98c3c6167532e5895554d4879d132ce
 ];
 
 export const series = [
