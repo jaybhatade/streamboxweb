@@ -18,6 +18,8 @@ function Home() {
       
 
       <Mainslider />
+    <ScrollComponent movies={movieList} startIndex={35} endIndex={47} headingTitle={"Bollywood Action Movies"}/>
+
       <ScrollComponent movies={movieList} headingTitle={"Trending Anime Movies"}/>
       <ScrollComponent movies={series} headingTitle={"Trending Anime Movies"}/>
       <ScrollComponent movies={movieList} startIndex={3} endIndex={6} headingTitle={"Latest Anime Movie"} />

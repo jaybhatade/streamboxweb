@@ -172,11 +172,7 @@ export const movieList = [
   {
     poster:
       "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-<<<<<<< HEAD
     plot: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
-=======
-    plot: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one.",
->>>>>>> a023e867f98c3c6167532e5895554d4879d132ce
     id: "tt1375666",
     title: "Inception",
     genre: "Action, Adventure, Sci-Fi",
@@ -217,8 +213,6 @@ export const movieList = [
     language: "English",
     runtime: "130 min",
   },
-<<<<<<< HEAD
-=======
 
   { poster: "https://m.media-amazon.com/images/M/MV5BMWU4ZjNlNTQtOGE2MS00NDI0LWFlYjMtMmY3ZWVkMjJkNGRmXkEyXkFqcGdeQXVyNjE1OTQ0NjA@._V1_SX300.jpg", plot: "The film chronicles India's covert military operation against suspected militants in Pakistan-occupied Kashmir. It follows the events leading up to and during the surgical strike, showcasing the Indian army's special forces as they carry out a secret mission to avenge the killing of their fellow soldiers at their base by a terrorist group.", id: "tt8291224", title: "Uri: The Surgical Strike", genre: "Action, Drama, History", released: "11 Jan 2019", language: "English", runtime: "138 min" },
 
@@ -242,7 +236,236 @@ export const movieList = [
 
   { poster: "https://m.media-amazon.com/images/M/MV5BNzZmOTU1ZTEtYzVhNi00NzQxLWI5ZjAtNWNhNjEwY2E3YmZjXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg", plot: "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.", id: "tt5433140", title: "Fast X", genre: "Action, Adventure, Crime", released: "19 May 2023", language: "English", runtime: "141 min" },
 
->>>>>>> a023e867f98c3c6167532e5895554d4879d132ce
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BNGViM2M4NmUtMmNkNy00MTQ5LTk5MDYtNmNhODAzODkwOTJlXkEyXkFqcGdeQXVyMTY1NDY4NTIw._V1_SX300.jpg",
+    plot: "The hardened son of a powerful industrialist returns home after years abroad and vows to take bloody revenge on those threatening his father's life.",
+    id: "tt13751694",
+    title: "Animal",
+    genre: "Action, Crime, Drama",
+    released: "01 Dec 2023",
+    language: "Hindi",
+    runtime: "204 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BZjkwN2Q5Y2QtMmE2MC00NzlkLTg2NzQtYjVjYjVmNjE2ZTNiXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "A reckless yet brilliant squadron leader and his team of elite fighter pilots face mortal dangers and inner demons as they unite for a deadly mission.",
+    id: "tt13818368",
+    title: "Fighter",
+    genre: "Action, Drama",
+    released: "25 Jan 2024",
+    language: "Hindi",
+    runtime: "166 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BN2VjYzIxN2ItN2E0MS00ODE4LThjMTgtMzE2OTM0ZmM4YjBmXkEyXkFqcGdeQXVyMTc0OTI3NjUy._V1_SX300.jpg",
+    plot: "Two elite soldiers with troubled pasts are enlisted for a daring mission when a deadly masked villain threatens India's defenses.",
+    id: "tt18072316",
+    title: "Bade Miyan Chote Miyan",
+    genre: "Action, Sci-Fi, Thriller",
+    released: "11 Apr 2024",
+    language: "Hindi",
+    runtime: "163 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BYzQwMGZlYTUtODUwNi00ZjQxLWEzODAtZGU3Zjc0MmNhMzhkXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_SX300.jpg",
+    plot: "Tiger and Zoya are back - to save the country and their family. This time it's personal.",
+    id: "tt18411490",
+    title: "Tiger 3",
+    genre: "Action, Adventure, Thriller",
+    released: "11 Nov 2023",
+    language: "Hindi",
+    runtime: "155 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BYTgzNjBjYTctOGJiZi00MTliLTk0YzYtNDJmYTQyMDdkMjQ5XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_SX300.jpg",
+    plot: "An Indian agent races against a doomsday clock as a ruthless mercenary, with a bitter vendetta, mounts an apocalyptic attack against the country.",
+    id: "tt12844910",
+    title: "Pathaan",
+    genre: "Action, Adventure, Thriller",
+    released: "25 Jan 2023",
+    language: "Hindi",
+    runtime: "146 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BOWI5NmU3NTUtOTZiMS00YzA1LThlYTktNDJjYTU5NDFiMDUxXkEyXkFqcGdeQXVyMTUzNjEwNjM2._V1_SX300.jpg",
+    plot: "A prison warden recruits inmates to commit outrageous crimes that shed light on corruption and injustice - and that lead him to an unexpected reunion.",
+    id: "tt15354916",
+    title: "Jawan",
+    genre: "Action, Crime, Drama",
+    released: "07 Sep 2023",
+    language: "Hindi",
+    runtime: "169 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BYTgxMzAwZTMtMTY5Yi00NWVmLTk1OGItNjAwYTAzOGU2OWNiXkEyXkFqcGdeQXVyMTYzMTU3Njgx._V1_SX300.jpg",
+    plot: "During the Partition of India in 1947, a Sikh truck driver falls in love with a Muslim girl belonging to an aristocratic family.",
+    id: "tt0284137",
+    title: "Gadar: Ek Prem Katha",
+    genre: "Action, Drama, Romance",
+    released: "15 Jun 2001",
+    language: "Hindi",
+    runtime: "170 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMDc5ZmQ3MzUtYTY4OS00YTE3LTkwNmItNmQ2ODIwNWM3MzY1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "Tanhaji is an action epic about the titular Maratha warrior and Shivaji's military commander who lost his father in a battle and grew up to become a fierce warrior with powerful combat skills. When Mughal emperor Aurangzeb recruits his trusted guard Udaybhan to take control of the Kondhana Fort, Shivaji decides not to engage Tanhaji whose son is going to get married soon. However, as Tanhaji learns of Udaybhan's heading towards the fortress, he decides to take charge and stop the rival army from reaching their destination. This doesn't turn out to be easy as Udaybhan finds himself helped by people who don't want Tanhaji to succeed, resulting in battles and attacks that ensue as the plot unfolds.",
+    id: "tt8108274",
+    title: "Tanhaji: The Unsung Warrior",
+    genre: "Action, Biography, Drama",
+    released: "10 Jan 2020",
+    language: "Hindi",
+    runtime: "135 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMDdlODdmODItZDAxNi00MjExLWFjOGItMGY3MzFjYzU4NDM3XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_SX300.jpg",
+    plot: "After terrorists hijack a passenger plane, an off-duty soldier aboard devises a strategy to defeat the hijackers and ensure the passengers' survival when the engine fails.",
+    id: "tt16139258",
+    title: "Yodha",
+    genre: "Action, Drama, Thriller",
+    released: "15 Mar 2024",
+    language: "Hindi",
+    runtime: "130 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMWUyNzBjNmEtOGM2NS00NDg3LTkzYjEtM2ZkNjc0NTRlODBlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "Unforeseen circumstances threaten the passionate relationship between star-crossed lovers.",
+    id: "tt10761694",
+    title: "Tadap",
+    genre: "Action, Drama, Romance",
+    released: "03 Dec 2021",
+    language: "Hindi",
+    runtime: "126 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMGYzM2QxNWEtY2EwZC00OTE2LWExZDEtNjQ0NDAyMjYzNGJlXkEyXkFqcGdeQXVyMTY1MjAwNDU0._V1_SX300.jpg",
+    plot: "Ahead of a major constitutional decision, special agent Zooni Haksar is tasked with a secret mission to quell violence in a conflict-ridden region.",
+    id: "tt30970235",
+    title: "Article 370",
+    genre: "Action, Drama, Thriller",
+    released: "23 Feb 2024",
+    language: "Hindi",
+    runtime: "158 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMTc2NTYwMTE1NV5BMl5BanBnXkFtZTgwODQ5MzAwMTI@._V1_SX300.jpg",
+    plot: "The film is set in the early 80's and 90's in Gujarat. The fictitious story of a man who builds an empire in the state of Gujarat, the only state that still follows prohibition. It's a story about his rise and his relationships, which help him become the single most powerful man in the state.",
+    id: "tt3405236",
+    title: "Raees",
+    genre: "Action, Crime, Drama",
+    released: "25 Jan 2017",
+    language: "Hindi",
+    runtime: "143 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BYmQxNmU4ZjgtYzE5Mi00ZDlhLTlhOTctMzJkNjk2ZGUyZGEwXkEyXkFqcGdeQXVyMzgxMDA0Nzk@._V1_SX300.jpg",
+    plot: "A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born.",
+    id: "tt8239946",
+    title: "Tumbbad",
+    genre: "Drama, Fantasy, Horror",
+    released: "12 Oct 2018",
+    language: "Hindi",
+    runtime: "104 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BNDA5OWE3YTUtNjU0Mi00MWI0LTg3ODgtYmUwNzdkNTdiOWQ2XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_SX300.jpg",
+    plot: "Set in the forests of Arunachal, Bhediya is a story of Bhaskar, a man who gets bitten by a wolf, and begins to transform into the creature. As Bhaskar and his buddies try to find answers, a bunch of twists, turns, and laughs ensue.",
+    id: "tt14099334",
+    title: "Bhediya",
+    genre: "Comedy, Fantasy, Horror",
+    released: "25 Nov 2022",
+    language: "Hindi",
+    runtime: "156 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BZTQzZjMwMDctNGY2OC00ZmU4LTgwYmEtNWIwMjE2Yjc4MmQ1XkEyXkFqcGdeQXVyMTI1NDAzMzM0._V1_SX300.jpg",
+    plot: "Hired to kidnap a bride, two bumbling pals get into a wacky predicament when one falls for their abductee, and the other falls for the spirit that possesses her.",
+    id: "tt10098288",
+    title: "Roohi",
+    genre: "Comedy, Horror",
+    released: "11 Mar 2021",
+    language: "Hindi",
+    runtime: "134 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMjk4NGZiMzAtODU1NS00MmQ4LWJiNmQtNWU5ZWU4Y2VmNWI0XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "In the small town of Chanderi, the menfolk live in fear of an evil spirit named \"Stree\" who abducts men in the night. Based on the urban legend of \"Nale Ba\" that went viral in Karnataka in the 1990s.",
+    id: "tt8108202",
+    title: "Stree",
+    genre: "Comedy, Horror",
+    released: "31 Aug 2018",
+    language: "Hindi",
+    runtime: "128 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BN2Q1ODU2NzQtMDE4Mi00M2ViLTg5NmItYWNlMzBmMDdjNGY0XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "An NRI and his wife decide to stay in his ancestral home, paying no heed to the warnings about ghosts. Soon, inexplicable occurrences cause him to call a psychiatrist to help solve the mystery.",
+    id: "tt0995031",
+    title: "Bhool Bhulaiyaa",
+    genre: "Comedy, Horror, Mystery",
+    released: "12 Oct 2007",
+    language: "Hindi, Bengali",
+    runtime: "159 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BNWY5MWEyNzYtYjI2ZS00OWU5LWIxOTUtNjViYTVhY2YzYTc0XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "When strangers Reet and Ruhan cross paths, their journey leads to an abandoned mansion and a dreaded spirit that has been trapped for 18 years.",
+    id: "tt6455162",
+    title: "Bhool Bhulaiyaa 2",
+    genre: "Comedy, Horror",
+    released: "20 May 2022",
+    language: "Hindi",
+    runtime: "143 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BYjczYjQ3ZTMtMDAwZi00Y2I2LWE2MTMtOGUyM2YyMThmYTFiXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "A family's getaway turns terrifying when an intruder possesses the teen daughter's body, putting her at the mercy of his increasingly sinister commands.",
+    id: "tt27744786",
+    title: "Shaitaan",
+    genre: "Drama, Horror, Thriller",
+    released: "08 Mar 2024",
+    language: "Hindi",
+    runtime: "132 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMTU4YzgxMjYtMzg4Mi00MjJiLThjOGMtYThkM2E0MWQ1NTA3XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    plot: "Arnab tries to help Ruksahana, who is found under mysterious circumstances in a house. He lets her stay at his home until he discovers something strange about her.",
+    id: "tt7329858",
+    title: "Pari",
+    genre: "Fantasy, Horror, Mystery",
+    released: "02 Mar 2018",
+    language: "Hindi",
+    runtime: "136 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BZGNlYzdiNGUtZGUwMC00MTFmLWI3Y2MtNTUwN2EyM2Y2ZmEwXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg",
+    plot: "Aasif visits his wife's parents' house and happens to go to a ground that is supposedly haunted. However, he is soon possessed by the spirit of a transgender who is out for revenge.",
+    id: "tt10350922",
+    title: "Laxmii",
+    genre: "Action, Comedy, Horror",
+    released: "09 Nov 2020",
+    language: "Hindi, English",
+    runtime: "141 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BMjQzNTQ0OTgtZjI3OC00YjBlLThlMjYtNGUzMjYwMTgwNmU1XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg",
+    plot: "After her husband is possessed by an evil spirit, a woman turns to her former lover to perform an exorcism.",
+    id: "tt5638500",
+    title: "1920 London",
+    genre: "Horror, Mystery",
+    released: "06 May 2016",
+    language: "Hindi",
+    runtime: "120 min"
+  },
+  {
+    poster: "https://m.media-amazon.com/images/M/MV5BNzFlZjA1YzAtMmYwNy00NjQ5LWJkNDUtNzczYjc0NGViNjRjXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg",
+    plot: "A bereaved shipping officer investigates the mystery behind a ghost ship that washes ashore in Mumbai.",
+    id: "tt10463030",
+    title: "Bhoot: Part One - The Haunted Ship",
+    genre: "Horror, Mystery, Thriller",
+    released: "21 Feb 2020",
+    language: "Hindi",
+    runtime: "114 min"
+  }
 ];
 
 export const series = [
