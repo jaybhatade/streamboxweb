@@ -70,7 +70,9 @@ const MoviePlayer = ({ movie }) => {
 
     <RandomScroll movies={movieList} count={15} headingTitle={"Recommended For You"}/>
 
-    <ScrollComponent movies={movieList} startIndex={10} headingTitle={"Recommended For You"}/>
+    <ScrollComponent movies={movieList} startIndex={20} endIndex={35} headingTitle={"Action Movies"}/>
+
+    <ScrollComponent movies={movieList} startIndex={47} endIndex={60} headingTitle={"Bollywood Horror Movies"}/>
     </div>
   );
 };

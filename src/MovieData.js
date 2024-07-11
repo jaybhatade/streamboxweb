@@ -1,68 +1,93 @@
 export const movieList = [
   {
-    id: "tt9426210",
-    poster:
-      "https://static.aniwavetv.to/i/2019/05/f96bc7c7f41d0652b437068c88dcd1bc.jpg",
-    title: "Weathering with You",
-    released: "17 Jan 2020",
+    poster: "https://m.media-amazon.com/images/M/MV5BNzE4ZDEzOGUtYWFjNC00ODczLTljOGQtZGNjNzhjNjdjNjgzXkEyXkFqcGdeQXVyNzE5ODMwNzI@._V1_SX300.jpg",
     plot: "Set during a period of exceptionally rainy weather, high-school boy Hodaka Morishima runs away from his troubled rural home to Tokyo and befriends an orphan girl who can manipulate the weather.",
+    id: "tt9426210",
+    title: "Weathering with You",
+    genre: "Animation, Drama, Fantasy",
+    released: "17 Jan 2020",
     language: "Japanese",
+    runtime: "112 min"
   },
   {
+    poster: "https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_SX300.jpg",
+    plot: "Mitsuha is the daughter of the mayor of a small mountain town. She's a straightforward high school girl who lives with her sister and her grandmother and has no qualms about letting it be known that she's uninterested in Shinto rituals or helping her father's electoral campaign. Instead she dreams of leaving the boring town and trying her luck in Tokyo. Taki is a high school boy in Tokyo who works part-time in an Italian restaurant and aspires to become an architect or an artist. Every night he has a strange dream where he becomes...a high school girl in a small mountain town.",
     id: "tt5311514",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BNDBlYmY3MzktMTgyOS00MTAwLTlkZDMtMGUzNDIyNTU2NjcyXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
-    alt: "imagebanner",
-    title: "Your Name",
-    discription: "Anime Movie",
+    title: "Your Name.",
+    genre: "Animation, Drama, Fantasy",
+    released: "07 Apr 2017",
+    language: "Japanese",
+    runtime: "106 min"
   },
   {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMTJjZmQ5MGQtMWU0My00ZTMzLWFmNTMtNDgzNmU4Y2MxOGUxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
-    alt: "imagebanner",
-    title: "Garden of Words",
+    poster: "https://m.media-amazon.com/images/M/MV5BMTJjZmQ5MGQtMWU0My00ZTMzLWFmNTMtNDgzNmU4Y2MxOGUxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
+    plot: "Takao, who dreams of becoming a shoemaker, skips school and is sketching shoes in a garden in the middle of Tokyo. He meets a mysterious woman, Yukino, who is older than him. Then, without arranging the times, the two start to see each other again and again, but only on rainy days.",
+    id: "tt2591814",
+    title: "The Garden of Words",
+    genre: "Animation, Drama, Romance",
+    released: "31 May 2013",
+    language: "Japanese, English",
+    runtime: "46 min"
   },
   {
-    poster:
-      "https://static.aniwavetv.to/i/5/5a/5a20094d4032f171e9bfd2e2e2d9cdf5.jpg",
-    alt: "imagebanner",
-    title: "Demon Slayer: Sibling's Bond",
-    cateagory: "Movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BODI2NjdlYWItMTE1ZC00YzI2LTlhZGQtNzE3NzA4MWM0ODYzXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_SX300.jpg",
+    plot: "Tanjiro Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, board the Infinity Train on a new mission with the Flame Pillar, Kyojuro Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!",
+    id: "tt11032374",
+    title: "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+    genre: "Animation, Action, Adventure",
+    released: "23 Apr 2021",
+    language: "Japanese",
+    runtime: "117 min"
   },
   {
-    poster:
-      "https://static.aniwavetv.to/i/1/11/f8afece6eff312ce165e22779b894708.jpg",
-    alt: "imagebanner",
-    title: "Movies 2024",
-    cateagory: "Movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BODM0NmVjMzUtOTJhNi00N2ZhLWFkYmMtYmZmNjRiY2M1YWY4XkEyXkFqcGdeQXVyOTgxOTA5MDg@._V1_SX300.jpg",
+    plot: "The prequel to Jujutsu Kaisen (2020), where a high schooler gains control of an extremely powerful cursed spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School by Jujutsu Sorcerers.",
+    id: "tt14331144",
+    title: "Jujutsu Kaisen 0",
+    genre: "Animation, Action, Fantasy",
+    released: "18 Mar 2022",
+    language: "Japanese",
+    runtime: "112 min"
   },
   {
-    poster:
-      "https://static.aniwavetv.to/i/0/01/016aafbf1f73381e0f91ee3f45b267d1.jpg",
-    alt: "imagebanner",
-    title: "Movies 2024",
-    cateagory: "Movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BNDI5ODBhYzMtNDc4Yi00NjEwLWJiZWUtMGE2Mzc4MGVjN2E0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    plot: "Miyo Sasaki is a weird second-year junior high student, who falls in love with her classmate Kento Hinode. Muge tries to make Kento notice her every day, but all in vain. Nevertheless, while carrying a secret she can tell no one, Muge continues to pursue Kento. Muge discovers a magic mask that allows her to transform into a cat, however, there is also a probability that she might never become human again, if she continues using the mask.",
+    id: "tt11958344",
+    title: "A Whisker Away",
+    genre: "Animation, Adventure, Drama",
+    released: "18 Jun 2020",
+    language: "Japanese",
+    runtime: "104 min"
   },
   {
-    poster:
-      "https://static.aniwavetv.to/i/2018/04/7a3dd597641c97e907433acf5f9c3eb5.jpg",
-    alt: "imagebanner",
-    title: "Naruto",
-    cateagory: "Movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    plot: "The story revolves around Shôko Nishimiya, a grade school student who has impaired hearing. She transfers into a new school, where she is bullied by her classmates, especially Shôya Ishida. It gets to the point where she transfers to another school and as a result, Shôya is ostracized and bullied himself, with no friends to speak to and no plans for the future. Years later, he epicly sets himself on a path to redemption.",
+    id: "tt5323662",
+    title: "A Silent Voice: The Movie",
+    genre: "Animation, Drama",
+    released: "17 Sep 2016",
+    language: "Japanese, Japanese Sign , English",
+    runtime: "130 min"
   },
   {
-    poster:
-      "https://static.aniwavetv.to/i/2018/04/7ed25f35038e8c1e3fb0133b262b063f.jpg",
-    alt: "imagebanner",
-    title: "Nruto Movie",
-    cateagory: "Movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    plot: "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches and spirits, and where humans are changed into beasts.",
+    id: "tt0245429",
+    title: "Spirited Away",
+    genre: "Animation, Adventure, Family",
+    released: "28 Mar 2003",
+    language: "Japanese, English",
+    runtime: "125 min"
   },
   {
-    poster:
-      "https://static.aniwavetv.to/i/0/01/016aafbf1f73381e0f91ee3f45b267d1.jpg",
-    alt: "imagebanner",
-    title: "Movies 2024",
-    cateagory: "Movie",
+    poster: "https://m.media-amazon.com/images/M/MV5BNGVkNDc3NjUtNTY5ZS00ZmE0LWE3YzctMDk2OTRlNTdiZWQwXkEyXkFqcGdeQXVyMTU3NDg0OTgx._V1_SX300.jpg",
+    plot: "Suzume, a 17-year-old girl who lives in a quiet town in Kyushu, meets a young man on a journey \"looking for doors.\" Suzume follows him to a ruin to a dilapidated building in the mountains and finds a free-standing, undisturbed door t as if \"it\" alone were saved from devastation. Suzume feels drawn by an invisible power and reaches out to the door - Soon, doors all over Japan start opening one after another. The doors that opened must be closed to shut out calamity that lies on the other side. -Stars, sunset, and the morning sky. The places she wanders into have a sky where all hours of the day seem to blend together- Beckoned by the mysterious doors, Suzume's \"journey of closing doors\" begins.",
+    id: "tt16428256",
+    title: "Suzume",
+    genre: "Animation, Action, Adventure",
+    released: "14 Apr 2023",
+    language: "Japanese, English",
+    runtime: "122 min"
   },
   {
     id: "tt10872600",
