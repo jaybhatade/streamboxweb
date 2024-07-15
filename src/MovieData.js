@@ -419,17 +419,7 @@ export const movieList = [
     language: "Hindi",
     runtime: "166 min",
   },
-  {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BN2VjYzIxN2ItN2E0MS00ODE4LThjMTgtMzE2OTM0ZmM4YjBmXkEyXkFqcGdeQXVyMTc0OTI3NjUy._V1_SX300.jpg",
-    plot: "Two elite soldiers with troubled pasts are enlisted for a daring mission when a deadly masked villain threatens India's defenses.",
-    id: "tt18072316",
-    title: "Bade Miyan Chote Miyan",
-    genre: "Action, Sci-Fi, Thriller",
-    released: "11 Apr 2024",
-    language: "Hindi",
-    runtime: "163 min",
-  },
+
   {
     poster:
       "https://m.media-amazon.com/images/M/MV5BYzQwMGZlYTUtODUwNi00ZjQxLWEzODAtZGU3Zjc0MmNhMzhkXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_SX300.jpg",
@@ -608,17 +598,6 @@ export const movieList = [
   },
   {
     poster:
-      "https://m.media-amazon.com/images/M/MV5BMTU4YzgxMjYtMzg4Mi00MjJiLThjOGMtYThkM2E0MWQ1NTA3XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
-    plot: "Arnab tries to help Ruksahana, who is found under mysterious circumstances in a house. He lets her stay at his home until he discovers something strange about her.",
-    id: "tt7329858",
-    title: "Pari",
-    genre: "Fantasy, Horror, Mystery",
-    released: "02 Mar 2018",
-    language: "Hindi",
-    runtime: "136 min",
-  },
-  {
-    poster:
       "https://m.media-amazon.com/images/M/MV5BZGNlYzdiNGUtZGUwMC00MTFmLWI3Y2MtNTUwN2EyM2Y2ZmEwXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg",
     plot: "Aasif visits his wife's parents' house and happens to go to a ground that is supposedly haunted. However, he is soon possessed by the spirit of a transgender who is out for revenge.",
     id: "tt10350922",
@@ -628,17 +607,7 @@ export const movieList = [
     language: "Hindi, English",
     runtime: "141 min",
   },
-  {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMjQzNTQ0OTgtZjI3OC00YjBlLThlMjYtNGUzMjYwMTgwNmU1XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg",
-    plot: "After her husband is possessed by an evil spirit, a woman turns to her former lover to perform an exorcism.",
-    id: "tt5638500",
-    title: "1920 London",
-    genre: "Horror, Mystery",
-    released: "06 May 2016",
-    language: "Hindi",
-    runtime: "120 min",
-  },
+
   {
     poster:
       "https://m.media-amazon.com/images/M/MV5BNzFlZjA1YzAtMmYwNy00NjQ5LWJkNDUtNzczYjc0NGViNjRjXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_SX300.jpg",
@@ -797,17 +766,6 @@ export const movieList = [
   },
   {
     poster:
-      "https://m.media-amazon.com/images/M/MV5BMTdiN2Q2MGUtYWRjMi00M2Y2LWEzOTYtOTA3NjNiMGMzNmFhXkEyXkFqcGdeQXVyNjE1OTQ0NjA@._V1_SX300.jpg",
-    plot: "Total Dhamaal is the third instalment in the Dhamaal franchise. A hidden booty of 50 crore leads to a mad chase amongst a bunch of greedy and eccentric characters. In them, are a bickering couple on the verge of a divorce, greedy siblings, local goons, a police commissioner and the mastermind of the loot. Will they finally discover the hidden treasure?",
-    id: "tt7639372",
-    title: "Total Dhamaal",
-    genre: "Action, Adventure, Comedy",
-    released: "2019-02-22",
-    language: "Hindi",
-    runtime: "130 min",
-  },
-  {
-    poster:
       "https://m.media-amazon.com/images/M/MV5BOTkwYTQ2ZWItZjQ0Ny00NmU0LWEzYzktZmNlZTU4ZTE1OWI1XkEyXkFqcGdeQXVyNzU3Nzk4MDQ@._V1_SX300.jpg",
     plot: "Akash a blind pianist is preparing for a London concert.Sophie's scooter bumps into Akash and upon finding he a pianist she takes him to her restaurant Franco's run by her father and offers him a job.Akash meets 70s actor Pramod Sinha at the restaurant who asks him to do a private concert of his songs at his residence to surprise his wife Simi. Next Day upon reaching his house a shocking surprise is waiting for Akash.",
     id: "tt8108198",
@@ -827,28 +785,6 @@ export const movieList = [
     released: "2018-02-23",
     language: "Hindi",
     runtime: "138 min",
-  },
-  {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BYmUyYzI5MjEtZGU5Mi00YTFiLWJmYjMtOWFmMzlmNTdmZTdjXkEyXkFqcGdeQXVyNzU3OTY4NTc@._V1_SX300.jpg",
-    plot: "Just out of jail, a don is ready to get back at the four friends who conned her.",
-    id: "tt6712014",
-    title: "Fukrey Returns",
-    genre: "Comedy",
-    released: "2017-12-08",
-    language: "Hindi",
-    runtime: "141 min",
-  },
-  {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BYmI5Y2JkNzUtNWJkZC00OTE1LTg3ZDItMjQ0Mzc1MjdhMzhiXkEyXkFqcGdeQXVyMjQwOTU5NTg@._V1_SX300.jpg",
-    plot: "The gang encounters with some spiritual bodies and finds out the truth about the Jamnadas Orphanage where they were brought up.",
-    id: "tt1806913",
-    title: "Golmaal Again",
-    genre: "Action, Comedy, Fantasy",
-    released: "2017-10-20",
-    language: "Hindi",
-    runtime: "140 min",
   },
   {
     poster:
@@ -885,17 +821,6 @@ export const movieList = [
   },
   {
     poster:
-      "https://m.media-amazon.com/images/M/MV5BZDQ5Zjg2ZDktYWIyZi00MTE4LWJiZTQtNzcwMzg3YjAzNGNhXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg",
-    plot: "London based business men Batuk Patel lives with his three daughters Ganga (Gracy),Jamuna (Jenny) and Saraswati (Sarah).The sisters want to get married to their boyfriends Sandy,Teddy and Bunty and speak to their father.But Aakhri Pasta a restaurant owner whose also a fortune teller to Batuk tells him that he will die if his daughter's boyfriend's speak,see or step into his house.Sandi,Teddy and Bunty pretend to be disable and enter the house and suspect each other of being normal and want to expose one another.But Batuk shares secret with Pasta that the daughters don't belong to him but his friend a Mumbai based Don Urja Nagre whose currently serving a jail term.",
-    id: "tt4559046",
-    title: "Housefull 3",
-    genre: "Action, Comedy, Romance",
-    released: "2016-06-03",
-    language: "Hindi",
-    runtime: "140 min",
-  },
-  {
-    poster:
       "https://m.media-amazon.com/images/M/MV5BMjE4NDk4MTIwNl5BMl5BanBnXkFtZTgwNDEwODI5NzE@._V1_SX300.jpg",
     plot: "The story about two brothers who visit their dysfunctional family for their grandfather's birthday party.",
     id: "tt4900716",
@@ -904,17 +829,6 @@ export const movieList = [
     released: "2016-03-18",
     language: "Hindi",
     runtime: "132 min",
-  },
-  {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMmM1MjBhN2YtYjllNi00NTcyLThlNDUtMTllMzA4ZjhlZThhXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_SX300.jpg",
-    plot: "Follows a young, married couple whose relationship challenges the gender roles placed upon women and men in Indian society.",
-    id: "tt4744086",
-    title: "Ki & Ka",
-    genre: "Comedy, Romance",
-    released: "2016-04-01",
-    language: "Hindi, English",
-    runtime: "126 min",
   },
   {
     poster:

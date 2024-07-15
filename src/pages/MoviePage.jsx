@@ -16,12 +16,12 @@ function MoviePage() {
 
     <ScrollComponent movies={movieList} startIndex={20} endIndex={35} headingTitle={"Action Movies"}/>
 
-    <ScrollComponent movies={movieList} startIndex={35} endIndex={47} headingTitle={"Bollywood Action Movies"}/>
-      <ScrollComponent movies={movieList} startIndex={47} endIndex={58} headingTitle={"Bollywood Horror Movies"} />
+    <ScrollComponent movies={movieList} startIndex={35} endIndex={46} headingTitle={"Bollywood Action Movies"}/>
+      <ScrollComponent movies={movieList} startIndex={46} endIndex={56} headingTitle={"Bollywood Horror Movies"} />
       
-      <ScrollComponent movies={movieList} startIndex={58} endIndex={70} headingTitle={"Horror Movies"} />
+      <ScrollComponent movies={movieList} startIndex={56} endIndex={67} headingTitle={"Horror Movies"} />
       
-    <ScrollComponent movies={movieList} startIndex={70} endIndex={88} headingTitle={"Comedy Collection"}/>
+    <ScrollComponent movies={movieList} startIndex={67} endIndex={88} headingTitle={"Comedy Collection"}/>
 
     </div>
   );

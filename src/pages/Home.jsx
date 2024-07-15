@@ -21,12 +21,12 @@ function Home() {
       <Mainslider />
     <ScrollComponent movies={movieList} startIndex={35} endIndex={47} headingTitle={"Bollywood Action Movies"}/>
 
-      <ScrollComponent movies={movieList} startIndex={70} endIndex={88} headingTitle={"Comedy Collection"}/>
+      <ScrollComponent movies={movieList} startIndex={67} endIndex={88} headingTitle={"Comedy Collection"}/>
       <RandomScroll movies={movieList} count={15} headingTitle={"Recommended For You"}/>
 
       <ScrollComponent movies={movieList} startIndex={20} endIndex={35} headingTitle={"Action Movies"} />
       
-      <ScrollComponent movies={movieList} startIndex={47} endIndex={60} headingTitle={"Bollywood Horror Movies"}/>
+      <ScrollComponent movies={movieList} startIndex={46} endIndex={56} headingTitle={"Bollywood Horror Movies"} />
       {/* <div className="w-full bg-red-300 h-[10vh] mt-8 flex justify-center items-center ">
         @StreamBox by Jay Bhatade
       </div> */}
