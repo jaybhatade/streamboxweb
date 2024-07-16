@@ -10,6 +10,7 @@ import PlayerPage from './components/VideoSteaming';
 import MoviePage from './pages/MoviePage';
 import Chatbot from './pages/Chatbot';
 import SearchPage from './pages/SearchPage';
+import AboutPage from './pages/About';
 
 // Layout component that includes the header and navigation
 const Layout = () => {
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "/player/:id", element: <PlayerPage /> },
       { path: "/premium", element: <Premium /> },
+      { path: "/about", element: <AboutPage /> },
       { path: "/movies", element: <MoviePage /> },
       { path: "/streamybot", element: <Chatbot/> },
       { path: "/search", element: <SearchPage/> },

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import { movieList } from '../MovieData';
+import React, { useState, useEffect, useRef } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { movieList } from "../MovieData";
 import { Link } from "react-router-dom";
 
-const API_KEY = 'AIzaSyB8ZEEbt6pzOuozn3HtCtImv6ONxW9Lkzk'; // Replace with your actual API key
+const API_KEY = "AIzaSyB8ZEEbt6pzOuozn3HtCtImv6ONxW9Lkzk"; // Replace with your actual API key
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const ScrollComponent = ({ movies }) => {
@@ -26,7 +26,9 @@ const ScrollComponent = ({ movies }) => {
               className="w-full h-[200px] rounded-lg shadow-md object-cover"
             />
             <div className="pt-1">
-              <h1 className="text-xs text-[#cfcfcf] line-clamp-2 overflow-hidden">{movie.title}</h1>
+              <h1 className="text-xs text-[#cfcfcf] line-clamp-2 overflow-hidden">
+                {movie.title}
+              </h1>
             </div>
           </Link>
         ))}
@@ -37,14 +39,15 @@ const ScrollComponent = ({ movies }) => {
 
 const MovieRecommendationChat = () => {
   const [messages, setMessages] = useState([]);
-  const [inputMessage, setInputMessage] = useState('');
+  const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [recommendedMovies, setRecommendedMovies] = useState([]);
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
     if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
     }
   }, [messages]);
 
@@ -52,15 +55,17 @@ const MovieRecommendationChat = () => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
 
-    const newMessage = { text: inputMessage, sender: 'user' };
+    const newMessage = { text: inputMessage, sender: "user" };
     setMessages((prevMessages) => [...prevMessages, newMessage]);
-    setInputMessage('');
+    setInputMessage("");
     setIsLoading(true);
 
     try {
       const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-      
-      const prompt = `Based on the following movie data: ${JSON.stringify(movieList)}, 
+
+      const prompt = `Based on the following movie data: ${JSON.stringify(
+        movieList
+      )}, 
                       and the user's request: "${inputMessage}", 
                       provide movie recommendations. Only recommend movies from the given data. 
                       If the request doesn't match any movies, politely say so and suggest alternatives from the list.
@@ -72,44 +77,53 @@ const MovieRecommendationChat = () => {
       const result = await model.generateContent(prompt);
       const response = await result.response;
       const responseText = response.text();
-      
+
       // Parse the JSON response
       const parsedResponse = JSON.parse(responseText);
-      
+
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: parsedResponse.message, sender: 'bot' },
+        { text: parsedResponse.message, sender: "bot" },
       ]);
 
       // Update recommended movies
-      const newRecommendedMovies = parsedResponse.recommendedMovies.map(id => 
-        movieList.find(movie => movie.id === id)
-      ).filter(Boolean);
-      
-      setRecommendedMovies(newRecommendedMovies);
+      const newRecommendedMovies = parsedResponse.recommendedMovies
+        .map((id) => movieList.find((movie) => movie.id === id))
+        .filter(Boolean);
 
+      setRecommendedMovies(newRecommendedMovies);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: 'Sorry, there was an error processing your request.', sender: 'bot' },
+        {
+          text: "Sorry, there was an error processing your request.",
+          sender: "bot",
+        },
       ]);
     } finally {
       setIsLoading(false);
     }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen bg-zinc-900 overflow-hidden">
       <div className="flex-1 overflow-hidden flex flex-col">
-        <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 space-y-4">
+        <div
+          ref={chatContainerRef}
+          className="flex-1 overflow-y-auto p-4 space-y-4"
+        >
           {messages.map((message, index) => (
             <div
               key={index}
               className={`p-2 rounded-lg ${
-                message.sender === 'user'
-                  ? 'bg-zinc-800 ml-auto text-white'
-                  : 'bg-zinc-700 mr-auto text-white'
+                message.sender === "user"
+                  ? "bg-zinc-800 ml-auto text-white"
+                  : "bg-zinc-700 mr-auto text-white"
               } max-w-[70%]`}
             >
               {message.text}
