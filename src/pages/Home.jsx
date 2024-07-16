@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Heading from '../components/Header'
 import Mainslider from "../components/mainslider";
 import ScrollComponent from "../components/ScrollComponent";
-import { movieList, series} from '../MovieData';
+import { movieList} from '../MovieData';
 import RandomScroll from '../components/RandomScroll'
 
 

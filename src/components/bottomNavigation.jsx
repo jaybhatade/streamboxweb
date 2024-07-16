@@ -28,10 +28,10 @@ function Navigation() {
                         <FaCrown size={25} className={getLinkStyle("/premium")} />
                         <h3 className="text-xs">Premium</h3>
                     </Link>
-                    {/* <Link to="/profile" className={`flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out ${getLinkStyle("/profile")}`}>
+                    <Link to="/profile" className={`flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out ${getLinkStyle("/profile")}`}>
                         <FaUser size={25} className={getLinkStyle("/profile")}/>
                         <h3 className="text-xs">Profile</h3>
-                    </Link> */}
+                    </Link>
                     <Link to="/search" className={`flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out ${getLinkStyle("/search")}`}>
                         <FaSearch size={25} className={getLinkStyle("/search")} />
                         <h3 className="text-xs">Search</h3>

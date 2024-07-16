@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Chat from '../components/Chat';
 
 function ProfilePage() {
   useEffect(() => {
@@ -7,7 +8,7 @@ function ProfilePage() {
   return (
     <div>
       <div className='w-full h-fit min-h-screen bg-black text-white'>
-      Profile Page
+      <Chat/>
     </div>
     </div>
   )
