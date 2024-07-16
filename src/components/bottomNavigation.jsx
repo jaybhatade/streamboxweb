@@ -2,7 +2,7 @@
 import { AiFillHome } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 import { FaCrown } from "react-icons/fa6";
-import { FaUser } from "react-icons/fa";
+import { BsStars } from "react-icons/bs";
 import { MdLocalMovies } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 
@@ -28,9 +28,9 @@ function Navigation() {
                         <FaCrown size={25} className={getLinkStyle("/premium")} />
                         <h3 className="text-xs">Premium</h3>
                     </Link>
-                    <Link to="/profile" className={`flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out ${getLinkStyle("/profile")}`}>
-                        <FaUser size={25} className={getLinkStyle("/profile")}/>
-                        <h3 className="text-xs">Profile</h3>
+                    <Link to="/streamybot" className={`flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out ${getLinkStyle("/streamybot")}`}>
+                        <BsStars size={25} className={getLinkStyle("/streamybot")}/>
+                        <h3 className="text-xs">Ask AI</h3>
                     </Link>
                     <Link to="/search" className={`flex flex-col gap-1 items-center justify-between hover:text-[#d41111] transition-all duration-200 ease-in-out ${getLinkStyle("/search")}`}>
                         <FaSearch size={25} className={getLinkStyle("/search")} />
