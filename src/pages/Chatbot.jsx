@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { movieList } from "../MovieData";
 import { Link } from "react-router-dom";
