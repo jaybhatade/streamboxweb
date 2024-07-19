@@ -39,6 +39,7 @@ const PlayerPage = () => {
 
        
       </div>
+      
     </div>
   );
 };

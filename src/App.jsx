@@ -11,6 +11,8 @@ import MoviePage from './pages/MoviePage';
 import Chatbot from './pages/Chatbot';
 import SearchPage from './pages/SearchPage';
 import AboutPage from './pages/About';
+import AuthPage from './Auth/AuthPage';
+
 
 // Layout component that includes the header and navigation
 const Layout = () => {
@@ -50,7 +52,10 @@ const router = createBrowserRouter([
       { path: "/about", element: <AboutPage /> },
       { path: "/movies", element: <MoviePage /> },
       { path: "/streamybot", element: <Chatbot/> },
-      { path: "/search", element: <SearchPage/> },
+      { path: "/search", element: <SearchPage /> },
+      { path: "/login", element: <AuthPage isLogin={true} />},
+      { path: "/signup", element: <AuthPage isLogin={false} />},
+      
     ],
   },
 ]);
