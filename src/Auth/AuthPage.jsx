@@ -44,13 +44,25 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSignUp = async (e) => {
     e.preventDefault();
+    setError(null);
+
+    if (!isValidEmail(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       navigate('/');
     } catch (error) {
-      setError(error.message);
+      setError(error.message.replace('Firebase: ', ''));
     }
   };
 
@@ -59,7 +71,7 @@ const SignUp = () => {
       await signInWithPopup(auth, googleProvider);
       navigate('/');
     } catch (error) {
-      setError(error.message);
+      setError(error.message.replace('Firebase: ', ''));
     }
   };
 
