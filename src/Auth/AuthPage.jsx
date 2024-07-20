@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaGoogle, FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
+import { FaGoogle, FaEnvelope, FaLock } from 'react-icons/fa';
 import Heading from '../components/Header';
 import { auth, googleProvider } from '../firebase';
 import { 
@@ -22,14 +22,14 @@ const AuthPage = ({ isLogin }) => {
 
   return (
     <div className="min-h-screen bg-black flex flex-col lg:px-0">
-      <Heading/>
+      <Heading />
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
           {isLogin ? 'Log in to your account' : 'Create a new account'}
         </h2>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="mt-8 mb-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-zinc-800 py-8 px-4 mx-4 shadow rounded-xl sm:rounded-2xl sm:px-10">
           {isLogin ? <Login /> : <SignUp />}
         </div>
@@ -42,14 +42,12 @@ const SignUp = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
   const [error, setError] = useState(null);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      // You can add the user's name to their profile here if needed
       navigate('/');
     } catch (error) {
       setError(error.message);
@@ -67,27 +65,6 @@ const SignUp = () => {
 
   return (
     <form className="space-y-6" onSubmit={handleSignUp}>
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-300">
-          Name
-        </label>
-        <div className="mt-1 relative rounded-md shadow-sm">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <FaUser className="h-5 w-5 text-gray-400" />
-          </div>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            className="bg-zinc-700 focus:ring-red-500 focus:border-red-500 block w-full pl-10 sm:text-sm border-gray-600 rounded-md text-white h-10"
-            placeholder="Full name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-      </div>
-
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-gray-300">
           Email address
@@ -137,7 +114,7 @@ const SignUp = () => {
           type="submit"
           className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
         >
-          Sign up
+          Register Now
         </button>
       </div>
 
@@ -184,7 +161,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/dashboard');
+      navigate('/');
     } catch (error) {
       setError(error.message);
     }
@@ -193,7 +170,7 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      navigate('/dashboard');
+      navigate('/');
     } catch (error) {
       setError(error.message);
     }

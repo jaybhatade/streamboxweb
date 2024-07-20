@@ -1,21 +1,37 @@
 import './App.css';
-import React,{ useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import LoadingBar from 'react-top-loading-bar'
 import Loader from './components/Loader';
-import { createBrowserRouter, RouterProvider, Outlet, useLocation } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet, useLocation, Navigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase'; // Make sure this path is correct
 import Navigation from './components/bottomNavigation';
 import Home from './pages/Home';
-import Premium from './pages/Premium';
 import PlayerPage from './components/VideoSteaming';
 import MoviePage from './pages/MoviePage';
 import Chatbot from './pages/Chatbot';
 import SearchPage from './pages/SearchPage';
 import AboutPage from './pages/About';
 import AuthPage from './Auth/AuthPage';
+import Profile from './pages/Profile';
 
+// ProtectedRoute component to check authentication
+const ProtectedRoute = ({ children }) => {
+  const [user, loading] = useAuthState(auth);
 
-// Layout component that includes the header and navigation
-const Layout = () => {
+  if (loading) {
+    return <Loader />;
+  }
+
+  if (!user) {
+    return <Navigate to="/signup" replace />;
+  }
+
+  return children;
+};
+
+// Main Layout component that includes the header and navigation
+const MainLayout = () => {
   const [progress, setProgress] = useState(0)
   const location = useLocation()
 
@@ -23,16 +39,14 @@ const Layout = () => {
     setProgress(100)
   }, [location])
 
-
-  console.log('Rendering Layout');
   return (
     <div className="w-full h-fit min-h-screen bg-black text-white">
       <main className="pb-16">
-      <LoadingBar
-        color='#B91C1C'
-        progress={progress}
-        onLoaderFinished={() => setProgress(0)}
-      />
+        <LoadingBar
+          color='#B91C1C'
+          progress={progress}
+          onLoaderFinished={() => setProgress(0)}
+        />
         <Outlet />
       </main>
       <Navigation />
@@ -40,22 +54,36 @@ const Layout = () => {
   );
 };
 
+// Auth Layout component without navigation
+const AuthLayout = () => {
+  return (
+    <div className="w-full h-fit min-h-screen bg-black text-white">
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
 // Router configuration
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Layout />,
+    element: <ProtectedRoute><MainLayout /></ProtectedRoute>,
     children: [
-      { index: true, element: <Home /> },
+      { path: "/", element: <Home /> },
       { path: "/player/:id", element: <PlayerPage /> },
-      { path: "/premium", element: <Premium /> },
+      { path: "/profile", element: <Profile /> },
       { path: "/about", element: <AboutPage /> },
       { path: "/movies", element: <MoviePage /> },
-      { path: "/streamybot", element: <Chatbot/> },
+      { path: "/streamybot", element: <Chatbot /> },
       { path: "/search", element: <SearchPage /> },
-      { path: "/login", element: <AuthPage isLogin={true} />},
-      { path: "/signup", element: <AuthPage isLogin={false} />},
-      
+    ],
+  },
+  {
+    element: <AuthLayout />,
+    children: [
+      { path: "/login", element: <AuthPage isLogin={true} /> },
+      { path: "/signup", element: <AuthPage isLogin={false} /> },
     ],
   },
 ]);
@@ -64,14 +92,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log('App component mounted');
     // Simulate an API call
     const simulateAPICall = async () => {
       try {
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 2000));
         setIsLoading(false);
-        console.log('Loading finished');
       } catch (error) {
         console.error('Failed to load resource:', error);
       }
@@ -79,8 +105,6 @@ function App() {
 
     simulateAPICall();
   }, []);
-
-  console.log('Rendering App, isLoading:', isLoading);
 
   return (
     <div className="App">
