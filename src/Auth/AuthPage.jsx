@@ -6,9 +6,22 @@ import { auth, googleProvider } from '../firebase';
 import { 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
-  signInWithPopup 
+  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult
 } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+
+// Function to detect if the app is running in a WebView
+const isWebView = () => {
+  const userAgent = navigator.userAgent.toLowerCase();
+  return (
+    userAgent.includes('wv') || // Android WebView
+    userAgent.includes('fb') || // Facebook in-app browser
+    (userAgent.includes('android') && userAgent.includes('version/')) || // Old Android browser
+    (userAgent.includes('iphone') && !userAgent.includes('safari')) // iOS WebView
+  );
+};
 
 const AuthPage = ({ isLogin }) => {
   const [user] = useAuthState(auth);
@@ -19,6 +32,19 @@ const AuthPage = ({ isLogin }) => {
       navigate('/');
     }
   }, [user, navigate]);
+
+  useEffect(() => {
+    // Check for redirect result when component mounts
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result) {
+          navigate('/');
+        }
+      })
+      .catch((error) => {
+        console.error("Error after redirect:", error);
+      });
+  }, [navigate]);
 
   return (
     <div className="min-h-screen bg-black flex flex-col lg:px-0">
@@ -68,8 +94,12 @@ const SignUp = () => {
 
   const handleGoogleSignUp = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
-      navigate('/');
+      if (isWebView()) {
+        await signInWithRedirect(auth, googleProvider);
+      } else {
+        await signInWithPopup(auth, googleProvider);
+        navigate('/');
+      }
     } catch (error) {
       setError(error.message.replace('Firebase: ', ''));
     }
@@ -181,8 +211,12 @@ const Login = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
-      navigate('/');
+      if (isWebView()) {
+        await signInWithRedirect(auth, googleProvider);
+      } else {
+        await signInWithPopup(auth, googleProvider);
+        navigate('/');
+      }
     } catch (error) {
       setError(error.message);
     }
