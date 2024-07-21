@@ -47,12 +47,12 @@ const Mainslider = () => {
       </div>
 
       {/* Desktop view */}
-      <div className="hidden md:flex w-full max-w-7xl flex-row-reverse items-center justify-between p-8 rounded-lg">
+      <div className="hidden md:flex w-full max-w-7xl flex-row-reverse items-center justify-between px-8 pb-8 rounded-lg">
         <div className="w-[30%] h-full flex items-center justify-center">
           <img 
             src={currentMovie.poster} 
             alt={currentMovie.title} 
-            className="w-full h-[90%] object-cover rounded-xl shadow-lg"
+            className="w-full h-[100%] object-cover rounded-xl shadow-lg"
           />
         </div>
         <div className="w-[60%] text-left flex flex-col justify-center pr-8">
