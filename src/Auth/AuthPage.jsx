@@ -37,27 +37,44 @@ const openInBrowser = (url) => {
 };
 
 const AuthPage = ({ isLogin }) => {
-  const [user] = useAuthState(auth);
+  const [user, loading, error] = useAuthState(auth);
+  const [initializing, setInitializing] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user) {
-      navigate('/');
-    }
-  }, [user, navigate]);
-
-  useEffect(() => {
-    // Check for redirect result when component mounts
-    getRedirectResult(auth)
-      .then((result) => {
+    const checkRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth);
         if (result) {
           navigate('/');
         }
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error after redirect:", error);
-      });
+      } finally {
+        setInitializing(false);
+      }
+    };
+
+    checkRedirectResult();
   }, [navigate]);
+
+  useEffect(() => {
+    if (!loading && user) {
+      navigate('/');
+    }
+  }, [user, loading, navigate]);
+
+  if (loading || initializing) {
+    return <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="text-white text-2xl">Loading...</div>
+    </div>;
+  }
+
+  if (error) {
+    return <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="text-red-500 text-2xl">Error: {error.message}</div>
+    </div>;
+  }
 
   return (
     <div className="min-h-screen bg-black flex flex-col lg:px-0">
@@ -76,6 +93,7 @@ const AuthPage = ({ isLogin }) => {
     </div>
   );
 };
+
 
 const SignUp = () => {
   const navigate = useNavigate();
