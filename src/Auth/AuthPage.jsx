@@ -109,7 +109,7 @@ const SignUp = () => {
   const handleGoogleSignUp = async () => {
     try {
       if (isWebView()) {
-        const authUrl = `https://streambox-70a34.firebaseapp.com/auth?provider=google&redirect=${encodeURIComponent(window.location.origin)}&action=signup`;
+        const authUrl = `https://streamboxweb.netlify.app/auth?provider=google&redirect=${encodeURIComponent(window.location.origin)}&action=signup`;
         openInBrowser(authUrl);
       } else {
         await signInWithPopup(auth, googleProvider);
@@ -227,7 +227,7 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     try {
       if (isWebView()) {
-        const authUrl = `https://streambox-70a34.firebaseapp.com/auth?provider=google&redirect=${encodeURIComponent(window.location.origin)}&action=login`;
+        const authUrl = `https://streamboxweb.netlify.app/auth?provider=google&redirect=${encodeURIComponent(window.location.origin)}&action=login`;
         openInBrowser(authUrl);
       } else {
         await signInWithPopup(auth, googleProvider);
