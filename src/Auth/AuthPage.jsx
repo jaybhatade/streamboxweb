@@ -23,6 +23,20 @@ const isWebView = () => {
   );
 };
 
+// Function to open URL in browser
+const openInBrowser = (url) => {
+  if (window.ReactNativeWebView) {
+    // For React Native WebView
+    window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'openBrowser', url }));
+  } else if (isWebView()) {
+    // For other WebViews
+    window.open(url, '_system');
+  } else {
+    // For regular web browsers
+    window.open(url, '_blank');
+  }
+};
+
 const AuthPage = ({ isLogin }) => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
@@ -95,7 +109,8 @@ const SignUp = () => {
   const handleGoogleSignUp = async () => {
     try {
       if (isWebView()) {
-        await signInWithRedirect(auth, googleProvider);
+        const authUrl = `https://streambox-70a34.firebaseapp.com/auth?provider=google&redirect=${encodeURIComponent(window.location.origin)}&action=signup`;
+        openInBrowser(authUrl);
       } else {
         await signInWithPopup(auth, googleProvider);
         navigate('/');
@@ -212,7 +227,8 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     try {
       if (isWebView()) {
-        await signInWithRedirect(auth, googleProvider);
+        const authUrl = `https://streambox-70a34.firebaseapp.com/auth?provider=google&redirect=${encodeURIComponent(window.location.origin)}&action=login`;
+        openInBrowser(authUrl);
       } else {
         await signInWithPopup(auth, googleProvider);
         navigate('/');
