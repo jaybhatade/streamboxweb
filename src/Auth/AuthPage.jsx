@@ -7,7 +7,6 @@ import {
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   signInWithPopup,
-  signInWithRedirect,
   getRedirectResult
 } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -109,7 +108,7 @@ const SignUp = () => {
   const handleGoogleSignUp = async () => {
     try {
       if (isWebView()) {
-        const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?state=AMbdmDnfen5Nf6N9NNDn-7SLydkPuqXqHKI5YgM_GMBr0JwGM1OZwAvWn1jkjNViv-wb6boNLikE8BxMaC2297iMd95SdjrifdmqFXfs30tHVZqb4RVsCmis9OiMTMHPNmbAOsQP-HulyzHUsmxr73Zgm_DIoxR4hajyIEt5eUfx8tKfTO5veLM3f2UqF21p3PfnvrNppA99Fi5bFJlR2WauNSeb1ZvW_luRuzjTCWQU8rI87D3xEor_WqGUc5uNtSuiJA_Z7yldIMXeo_dV6uw5av4Av95sCMH8zD67y9YmxvzdcDT7UbI8CAJZ-2b2GpBhOBUPXCv_SQ&code=4%2F0AcvDMrAqzcH32sd3TUWOFrwNXhcuwh_eCGWPZ0h3CjXfwWa3u3K9i9UeSYDXdyWarFB3Dg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none`;
+        const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
         openInBrowser(authUrl);
       } else {
         await signInWithPopup(auth, googleProvider);
@@ -227,7 +226,7 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     try {
       if (isWebView()) {
-        const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?state=AMbdmDlNYy3yTjQeiiPTuKgx7sRiSPjNA31xmjSKK04HeKjROS4hOJBZ7HSNW1xEF6xvHSJVMqJ8jx2G7mKyRf4MMe8XfbJbo0YCPRp5v1eiGEQt0h_ttEXjrcXLga5LGSD82VrNSB_Pj21J1v3tc6xzYG42ReZBE4bzUVcGSRTvUAukdYZCSJJBDDQqHb7DNmU0OwCwDYhTXVTlUPCbkyL-f0WzTnHmXsqSGtDUnEfrlBMyDnTpfrhrxoQyKVZpO-JdOsuMjOINKzSvEBaWdHpAbqTXLYyf4GslfTt0MCPN-nPFQ7NSqVNhJPF68bwZrcPDsl-s4lbn8g&code=4%2F0AcvDMrCBG1DdbU3-MN1PN6gOhxK434ardgPFO5Qls_LymkiBUAXF9PLax0kMlPKYW2i_EA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none`;
+        const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
         openInBrowser(authUrl);
       } else {
         await signInWithPopup(auth, googleProvider);
