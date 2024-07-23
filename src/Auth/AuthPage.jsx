@@ -1,37 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaGoogle, FaEnvelope, FaLock } from 'react-icons/fa';
+import { FaEnvelope, FaLock } from 'react-icons/fa';
 import Heading from '../components/Header';
-import { auth, googleProvider } from '../firebase';
+import { auth } from '../firebase';
 import { 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
-  signInWithRedirect,
-  getRedirectResult,
   browserSessionPersistence,
   setPersistence
 } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
-
-const isWebView = () => {
-  const userAgent = navigator.userAgent.toLowerCase();
-  return (
-    userAgent.includes('wv') || // Android WebView
-    userAgent.includes('fb') || // Facebook in-app browser
-    (userAgent.includes('android') && userAgent.includes('version/')) || // Old Android browser
-    (userAgent.includes('iphone') && !userAgent.includes('safari')) // iOS WebView
-  );
-};
-
-const openInBrowser = (url) => {
-  if (window.ReactNativeWebView) {
-    window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'openBrowser', url }));
-  } else if (isWebView()) {
-    window.location.href = url;
-  } else {
-    window.open(url, '_blank');
-  }
-};
 
 const AuthPage = ({ isLogin }) => {
   const [user, loading, error] = useAuthState(auth);
@@ -42,10 +20,6 @@ const AuthPage = ({ isLogin }) => {
     const initializeAuth = async () => {
       try {
         await setPersistence(auth, browserSessionPersistence);
-        const result = await getRedirectResult(auth);
-        if (result?.user) {
-          navigate('/');
-        }
       } catch (error) {
         console.error("Error initializing auth:", error);
       } finally {
@@ -54,7 +28,7 @@ const AuthPage = ({ isLogin }) => {
     };
 
     initializeAuth();
-  }, [navigate]);
+  }, []);
 
   useEffect(() => {
     if (!loading && !initializing && user) {
@@ -96,7 +70,7 @@ const AuthPage = ({ isLogin }) => {
   );
 };
 
-const AuthForm = ({ isLogin, onSubmit, onGoogleAuth }) => {
+const AuthForm = ({ isLogin, onSubmit }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -177,28 +151,6 @@ const AuthForm = ({ isLogin, onSubmit, onGoogleAuth }) => {
         </button>
       </div>
 
-      <div className="mt-6">
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-600" />
-          </div>
-          <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-zinc-800 text-gray-400">Or continue with</span>
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <button
-            type="button"
-            onClick={onGoogleAuth}
-            className="w-full inline-flex justify-center py-2 px-4 border border-gray-600 rounded-md shadow-sm bg-zinc-700 text-sm font-medium text-gray-300 hover:bg-zinc-600"
-          >
-            <FaGoogle className="h-5 w-5 text-red-600 mr-2" />
-            {isLogin ? 'Sign in with Google' : 'Sign up with Google'}
-          </button>
-        </div>
-      </div>
-
       {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
 
       <div className="text-sm text-center mt-6">
@@ -224,12 +176,7 @@ const LoginForm = () => {
     navigate('/');
   };
 
-  const handleGoogleLogin = () => {
-    const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
-    openInBrowser(authUrl);
-  };
-
-  return <AuthForm isLogin={true} onSubmit={handleLogin} onGoogleAuth={handleGoogleLogin} />;
+  return <AuthForm isLogin={true} onSubmit={handleLogin} />;
 };
 
 const SignUpForm = () => {
@@ -240,12 +187,7 @@ const SignUpForm = () => {
     navigate('/');
   };
 
-  const handleGoogleSignUp = () => {
-    const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
-    openInBrowser(authUrl);
-  };
-
-  return <AuthForm isLogin={false} onSubmit={handleSignUp} onGoogleAuth={handleGoogleSignUp} />;
+  return <AuthForm isLogin={false} onSubmit={handleSignUp} />;
 };
 
 export default AuthPage;
