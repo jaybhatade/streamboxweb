@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaGoogle } from 'react-icons/fa';
 import Heading from '../components/Header';
 import { auth } from '../firebase';
 import { 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   browserSessionPersistence,
-  setPersistence
+  setPersistence,
+  GoogleAuthProvider,
+  signInWithPopup
 } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 const AuthPage = ({ isLogin }) => {
   const [user, loading, error] = useAuthState(auth);
   const [initializing, setInitializing] = useState(true);
+  const [isWebView, setIsWebView] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,6 +31,7 @@ const AuthPage = ({ isLogin }) => {
     };
 
     initializeAuth();
+    checkIfWebView();
   }, []);
 
   useEffect(() => {
@@ -35,6 +39,12 @@ const AuthPage = ({ isLogin }) => {
       navigate('/');
     }
   }, [user, loading, initializing, navigate]);
+
+  const checkIfWebView = () => {
+    // This is a simple check and might need to be adjusted based on your specific requirements
+    const userAgent = navigator.userAgent.toLowerCase();
+    setIsWebView(/webview|wv|android.+chrome|crios/i.test(userAgent));
+  };
 
   if (loading || initializing) {
     return (
@@ -63,14 +73,14 @@ const AuthPage = ({ isLogin }) => {
 
       <div className="mt-8 mb-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-zinc-800 py-8 px-4 mx-4 shadow rounded-xl sm:rounded-2xl sm:px-10">
-          {isLogin ? <LoginForm /> : <SignUpForm />}
+          {isLogin ? <LoginForm isWebView={isWebView} /> : <SignUpForm isWebView={isWebView} />}
         </div>
       </div>
     </div>
   );
 };
 
-const AuthForm = ({ isLogin, onSubmit }) => {
+const AuthForm = ({ isLogin, onSubmit, onGoogleSignIn, isWebView }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -151,6 +161,19 @@ const AuthForm = ({ isLogin, onSubmit }) => {
         </button>
       </div>
 
+      {!isWebView && (
+        <div>
+          <button
+            type="button"
+            onClick={onGoogleSignIn}
+            className="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+          >
+            <FaGoogle className="mr-2" />
+            {isLogin ? 'Log in with Google' : 'Sign up with Google'}
+          </button>
+        </div>
+      )}
+
       {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
 
       <div className="text-sm text-center mt-6">
@@ -168,7 +191,7 @@ const AuthForm = ({ isLogin, onSubmit }) => {
   );
 };
 
-const LoginForm = () => {
+const LoginForm = ({ isWebView }) => {
   const navigate = useNavigate();
 
   const handleLogin = async (email, password) => {
@@ -176,10 +199,20 @@ const LoginForm = () => {
     navigate('/');
   };
 
-  return <AuthForm isLogin={true} onSubmit={handleLogin} />;
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      navigate('/');
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+    }
+  };
+
+  return <AuthForm isLogin={true} onSubmit={handleLogin} onGoogleSignIn={handleGoogleSignIn} isWebView={isWebView} />;
 };
 
-const SignUpForm = () => {
+const SignUpForm = ({ isWebView }) => {
   const navigate = useNavigate();
 
   const handleSignUp = async (email, password) => {
@@ -187,7 +220,17 @@ const SignUpForm = () => {
     navigate('/');
   };
 
-  return <AuthForm isLogin={false} onSubmit={handleSignUp} />;
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      navigate('/');
+    } catch (error) {
+      console.error("Error signing up with Google:", error);
+    }
+  };
+
+  return <AuthForm isLogin={false} onSubmit={handleSignUp} onGoogleSignIn={handleGoogleSignIn} isWebView={isWebView} />;
 };
 
 export default AuthPage;
