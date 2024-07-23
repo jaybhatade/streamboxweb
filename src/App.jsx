@@ -68,8 +68,7 @@ const AuthLayout = () => {
 // Router configuration
 const router = createBrowserRouter([
   {
-    // element: <ProtectedRoute><MainLayout /></ProtectedRoute>,
-    element: <MainLayout />,
+    element: <ProtectedRoute><MainLayout /></ProtectedRoute>,
     children: [
       { path: "/", element: <Home /> },
       { path: "/player/:id", element: <PlayerPage /> },
