@@ -27,7 +27,7 @@ const openInBrowser = (url) => {
   if (window.ReactNativeWebView) {
     window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'openBrowser', url }));
   } else if (isWebView()) {
-    window.open(url, '_system');
+    window.location.href = url;
   } else {
     window.open(url, '_blank');
   }
@@ -224,13 +224,9 @@ const LoginForm = () => {
     navigate('/');
   };
 
-  const handleGoogleLogin = async () => {
-    if (isWebView()) {
-      const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
-      openInBrowser(authUrl);
-    } else {
-      await signInWithRedirect(auth, googleProvider);
-    }
+  const handleGoogleLogin = () => {
+    const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
+    openInBrowser(authUrl);
   };
 
   return <AuthForm isLogin={true} onSubmit={handleLogin} onGoogleAuth={handleGoogleLogin} />;
@@ -244,13 +240,9 @@ const SignUpForm = () => {
     navigate('/');
   };
 
-  const handleGoogleSignUp = async () => {
-    if (isWebView()) {
-      const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
-      openInBrowser(authUrl);
-    } else {
-      await signInWithRedirect(auth, googleProvider);
-    }
+  const handleGoogleSignUp = () => {
+    const authUrl = `https://streambox-70a34.firebaseapp.com/__/auth/handler?provider=google&redirect=${encodeURIComponent(window.location.origin)}`;
+    openInBrowser(authUrl);
   };
 
   return <AuthForm isLogin={false} onSubmit={handleSignUp} onGoogleAuth={handleGoogleSignUp} />;
