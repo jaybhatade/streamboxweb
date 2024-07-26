@@ -4,7 +4,7 @@ import LoadingBar from 'react-top-loading-bar'
 import Loader from './components/Loader';
 import { createBrowserRouter, RouterProvider, Outlet, useLocation, Navigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from './firebase'; // Make sure this path is correct
+import { auth } from './firebase';
 import Navigation from './components/bottomNavigation';
 import Home from './pages/Home';
 import PlayerPage from './components/VideoSteaming';
@@ -24,7 +24,7 @@ const ProtectedRoute = ({ children }) => {
   }
 
   if (!user) {
-    return <Navigate to="/signup" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   return children;
@@ -90,12 +90,11 @@ const router = createBrowserRouter([
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
-    // Simulate an API call
     const simulateAPICall = async () => {
       try {
-        // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 2000));
         setIsLoading(false);
       } catch (error) {

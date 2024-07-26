@@ -6,8 +6,8 @@ import { auth } from '../firebase';
 import { 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
-  browserSessionPersistence,
   setPersistence,
+  browserLocalPersistence,
   GoogleAuthProvider,
   signInWithPopup
 } from 'firebase/auth';
@@ -22,7 +22,7 @@ const AuthPage = ({ isLogin }) => {
   useEffect(() => {
     const initializeAuth = async () => {
       try {
-        await setPersistence(auth, browserSessionPersistence);
+        await setPersistence(auth, browserLocalPersistence);
       } catch (error) {
         console.error("Error initializing auth:", error);
       } finally {
@@ -41,7 +41,6 @@ const AuthPage = ({ isLogin }) => {
   }, [user, loading, initializing, navigate]);
 
   const checkIfWebView = () => {
-    // This is a simple check and might need to be adjusted based on your specific requirements
     const userAgent = navigator.userAgent.toLowerCase();
     setIsWebView(/webview|wv|android.+chrome|crios/i.test(userAgent));
   };
@@ -66,7 +65,6 @@ const AuthPage = ({ isLogin }) => {
     <>
     <Heading />
     <div className="min-h-[90vh] bg-black flex flex-col lg:px-0">
-      
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-[10vh] text-center text-3xl font-extrabold text-white">
           {isLogin ? 'Log in to your account' : 'Create a new account'}
@@ -198,8 +196,13 @@ const LoginForm = ({ isWebView }) => {
   const navigate = useNavigate();
 
   const handleLogin = async (email, password) => {
-    await signInWithEmailAndPassword(auth, email, password);
-    navigate('/');
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate('/');
+    } catch (error) {
+      console.error("Error signing in:", error);
+      throw error;
+    }
   };
 
   const handleGoogleSignIn = async () => {
@@ -219,8 +222,13 @@ const SignUpForm = ({ isWebView }) => {
   const navigate = useNavigate();
 
   const handleSignUp = async (email, password) => {
-    await createUserWithEmailAndPassword(auth, email, password);
-    navigate('/');
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate('/');
+    } catch (error) {
+      console.error("Error signing up:", error);
+      throw error;
+    }
   };
 
   const handleGoogleSignIn = async () => {
