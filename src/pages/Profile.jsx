@@ -71,13 +71,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="mt-8 flex justify-center space-x-4">
-              <button
-                onClick={() => {/* Implement edit profile functionality */}}
-                className="bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-2 px-4 rounded inline-flex items-center transition duration-300"
-              >
-                <FaEdit className="mr-2" />
-                <span>Edit Profile</span>
-              </button>
+                
               <button
                 onClick={handleLogout}
                 className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-flex items-center transition duration-300"
