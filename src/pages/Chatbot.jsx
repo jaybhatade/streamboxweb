@@ -68,8 +68,8 @@ const MovieRecommendationChat = () => {
       )}, 
                       and the user's request: "${inputMessage}", 
                       provide movie recommendations. Only recommend movies from the given data. 
-                      If the request doesn't match any movies, politely say so and suggest alternatives from the list.
-                      Keep your response concise and friendly. Don't provide information about movies outside of the data.
+                      If the request doesn't match any movies, politely say so and suggest alternatives from the list. 
+                      Keep your response concise and friendly. Don't provide information about movies outside of the data. you can give summary of the movie by your own.
                       Return your response as a JSON object with two properties:
                       1. 'message': Your text response to the user
                       2. 'recommendedMovies': An array of movie IDs that you're recommending`;
