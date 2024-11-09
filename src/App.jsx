@@ -15,33 +15,25 @@ import AboutPage from './pages/About';
 import AuthPage from './Auth/AuthPage';
 import Profile from './pages/Profile';
 
-// ProtectedRoute component to check authentication
 const ProtectedRoute = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-
-  if (loading) {
-    return <Loader />;
-  }
-
-  if (!user) {
-    return <Navigate to="/login" replace />;
-  }
-
+  if (loading) return <Loader />;
+  if (!user) return <Navigate to="/login" replace />;
   return children;
 };
 
-// Main Layout component that includes the header and navigation
-const MainLayout = () => {
-  const [progress, setProgress] = useState(0)
-  const location = useLocation()
+const Layout = () => {
+  const [progress, setProgress] = useState(0);
+  const location = useLocation();
+  const isPlayerPage = location.pathname.startsWith('/player/');
 
   React.useEffect(() => {
-    setProgress(100)
-  }, [location])
+    setProgress(100);
+  }, [location]);
 
   return (
     <div className="w-full h-fit min-h-screen bg-black text-white">
-      <main className="pb-16">
+      <main className={isPlayerPage ? '' : 'pb-16'}>
         <LoadingBar
           color='#B91C1C'
           progress={progress}
@@ -49,26 +41,14 @@ const MainLayout = () => {
         />
         <Outlet />
       </main>
-      <Navigation />
+      {!isPlayerPage && <Navigation />}
     </div>
   );
 };
 
-// Auth Layout component without navigation
-const AuthLayout = () => {
-  return (
-    <div className="w-full h-fit min-h-screen bg-black text-white">
-      <main>
-        <Outlet />
-      </main>
-    </div>
-  );
-};
-
-// Router configuration
 const router = createBrowserRouter([
   {
-    element: <ProtectedRoute><MainLayout /></ProtectedRoute>,
+    element: <ProtectedRoute><Layout /></ProtectedRoute>,
     children: [
       { path: "/", element: <Home /> },
       { path: "/player/:id", element: <PlayerPage /> },
@@ -80,17 +60,17 @@ const router = createBrowserRouter([
     ],
   },
   {
-    element: <AuthLayout />,
-    children: [
-      { path: "/login", element: <AuthPage isLogin={true} /> },
-      { path: "/signup", element: <AuthPage isLogin={false} /> },
-    ],
+    path: "/login",
+    element: <AuthPage isLogin={true} />
   },
+  {
+    path: "/signup", 
+    element: <AuthPage isLogin={false} />
+  }
 ]);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [user] = useAuthState(auth);
 
   useEffect(() => {
     const simulateAPICall = async () => {
