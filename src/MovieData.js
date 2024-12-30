@@ -873,18 +873,7 @@ export const movieList = [
     released: "2009-12-25",
     language: "Hindi, English",
     runtime: "170 min",
-  },
-  {
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
-    plot: "Farhan Qureshi and Raju Rastogi want to re-unite with their fellow collegian, Rancho, after faking a stroke aboard an Air India plane, and excusing himself from his wife - trouser less - respectively. Enroute, they encounter another student, Chatur Ramalingam, now a successful businessman, who reminds them of a bet they had undertaken 10 years ago. The trio, while recollecting hilarious antics, including their run-ins with the Dean of Delhi's Imperial College of Engineering, Viru Sahastrabudhe, race to locate Rancho, at his last known address - little knowing the secret that was kept from them all this time.",
-    id: "tt2461132",
-    title: "Happy New Year",
-    genre: "Comedy, Drama",
-    released: "2009-12-25",
-    language: "Hindi, English",
-    runtime: "170 min",
-  },
+  }, 
     {
     poster:
       "https://m.media-amazon.com/images/M/MV5BYjc3MjY0NzctMGYwNy00ZGYyLThiOTctMjI1MWRkNmU3ZWNiXkEyXkFqcGc@._V1_SX300.jpg",
@@ -896,6 +885,41 @@ export const movieList = [
     language: "Hindi",
     runtime: "180 min",
   },
+  {
+  poster:
+    "https://m.media-amazon.com/images/M/MV5BZTgyNWUxNjItYTgxNi00ZDMzLThiMGItYjVlMjQ4NzkzOThlXkEyXkFqcGc@._V1_SX300.jpg",
+  plot: "In the 1970s, Om, an aspiring actor, is murdered, but is immediately reincarnated into the present day. He attempts to discover the mystery of his demise and find Shanti, the love of his previous life.",
+  id: "tt1024943",
+  title: "Om Shanti Om",
+  genre: "Action, Comedy, Drama",
+  released: "2007-11-09",
+  language: "Hindi, Urdu",
+  runtime: "162 min",
+},
+  {
+  poster:
+    "https://m.media-amazon.com/images/M/MV5BNjFmN2I5ZWUtOTJmNC00NjhiLTliYmItODViZmNiNmUyOTI3XkEyXkFqcGc@._V1_SX300.jpg",
+  plot: "A man travelling to Rameswaram via Chennai express for his late grandfather's ashes immersion finds himself in trouble after helping a don's daughter and her cousins board the train.",
+  id: "tt2112124",
+  title: "Chennai Express",
+  genre: "Action, Comedy, Drama",
+  released: "2013-08-08",
+  language: "Hindi, Tamil, English, Marathi",
+  runtime: "141 min",
+},
+{
+  poster:
+    "https://m.media-amazon.com/images/M/MV5BMDcwZDJhOGQtNWI5NS00MmI3LWFkYjMtNTY3OGUxMjgwMjZiXkEyXkFqcGc@._V1_SX300.jpg",
+  plot: "An army major goes undercover as a college student. His mission is both professional and personal: to protect his general's daughter from a radical militant, and to find his estranged half-brother.",
+  id: "tt0347473",
+  title: "Main Hoon Na",
+  genre: "Action, Comedy, Drama",
+  released: "2004-04-30",
+  language: "Hindi",
+  runtime: "182 min",
+},
+
+
 ];
 
 export const series = [
