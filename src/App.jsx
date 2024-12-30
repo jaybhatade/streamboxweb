@@ -14,6 +14,7 @@ import SearchPage from './pages/SearchPage';
 import AboutPage from './pages/About';
 import AuthPage from './Auth/AuthPage';
 import Profile from './pages/Profile';
+import Imdbmovie from './components/imdbmovie';
 
 const ProtectedRoute = ({ children }) => {
   const [user, loading] = useAuthState(auth);
@@ -57,6 +58,7 @@ const router = createBrowserRouter([
       { path: "/movies", element: <MoviePage /> },
       { path: "/streamybot", element: <Chatbot /> },
       { path: "/search", element: <SearchPage /> },
+      { path: "/imdb/:id", element: <Imdbmovie /> },
     ],
   },
   {

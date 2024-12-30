@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { movieList } from '../MovieData';
 import { debounce } from 'lodash-es';
 
 const MovieSearch = () => {
   const [query, setQuery] = useState('');
   const [filteredMovies, setFilteredMovies] = useState([]);
+  const navigate = useNavigate();
 
   const filterMovies = useCallback((searchQuery) => {
     const trimmedQuery = searchQuery.trim().toLowerCase();
@@ -16,8 +17,14 @@ const MovieSearch = () => {
         movie.title.toLowerCase().includes(trimmedQuery)
       );
       setFilteredMovies(filtered);
+
+      // Check if the search query matches any movie title
+      if (filtered.length === 0) {
+        // If no match, redirect to the IMDb page with the query as the id
+        navigate(`/imdb/${trimmedQuery}`);
+      }
     }
-  }, []);
+  }, [navigate]);
 
   const debouncedSearch = useCallback(
     debounce((searchQuery) => {
