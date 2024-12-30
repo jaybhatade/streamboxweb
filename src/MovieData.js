@@ -885,6 +885,17 @@ export const movieList = [
     language: "Hindi, English",
     runtime: "170 min",
   },
+    {
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYjc3MjY0NzctMGYwNy00ZGYyLThiOTctMjI1MWRkNmU3ZWNiXkEyXkFqcGc@._V1_SX300.jpg",
+    plot: "A gang of amateur dancers takes part in a dancing competition to avenge their personal vendetta.",
+    id: "tt2461132",
+    title: "Happy New Year",
+    genre: "Action, Comedy, Crime",
+    released: "2014-10-24",
+    language: "Hindi",
+    runtime: "180 min",
+  },
 ];
 
 export const series = [
