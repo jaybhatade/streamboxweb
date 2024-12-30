@@ -874,6 +874,17 @@ export const movieList = [
     language: "Hindi, English",
     runtime: "170 min",
   },
+  {
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    plot: "Farhan Qureshi and Raju Rastogi want to re-unite with their fellow collegian, Rancho, after faking a stroke aboard an Air India plane, and excusing himself from his wife - trouser less - respectively. Enroute, they encounter another student, Chatur Ramalingam, now a successful businessman, who reminds them of a bet they had undertaken 10 years ago. The trio, while recollecting hilarious antics, including their run-ins with the Dean of Delhi's Imperial College of Engineering, Viru Sahastrabudhe, race to locate Rancho, at his last known address - little knowing the secret that was kept from them all this time.",
+    id: "tt2461132",
+    title: "Happy New Year",
+    genre: "Comedy, Drama",
+    released: "2009-12-25",
+    language: "Hindi, English",
+    runtime: "170 min",
+  },
 ];
 
 export const series = [
